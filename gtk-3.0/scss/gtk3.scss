@@ -1,0 +1,496 @@
+@import '../node_modules/mathsass/dist/math';
+
+
+$windowBackground: #0C0E14;
+
+$headerbarBackground: #0C0E14;
+
+$background: #181B28;
+
+
+
+$backgroundColor: #121213;
+$backgroundContrastColor: lighten($backgroundColor, 3%);
+$backgroundSecondContrastColor: lighten($backgroundContrastColor, 2%);
+
+$foocolor: lighten($backgroundColor, 1%);
+
+
+
+$highlightColor: #007AFF;
+
+@function highlightColorDependingOnLightness($color, $percent: 3%) {
+  @if (lightness($color) > 50) {
+    @return darken($color, $percent);
+  } @else {
+    @return lighten($color, $percent);
+  }
+}
+
+@function getHoverColor($color) {
+  @return highlightColorDependingOnLightness($color, 5%);
+}
+
+@function getForegroundColorForBackgroundColor($backgroundColor) {
+  @return highlightColorDependingOnLightness($backgroundColor, 50%);
+}
+
+@function calculateContrastColor($color) {
+  $lightness: lightness($color);
+  $targetLightness: ($lightness + 0.05) * 8;
+  $targetColor: lighten($color, $targetLightness - $lightness);
+
+  @debug "given color: " + $color;
+  @debug "given lightness: " + $lightness;
+  @debug "target lightness: " + $targetLightness;
+  @debug "target color: " + $targetColor;
+
+  @return $targetColor;
+}
+
+
+@function getLuminance($color) {
+  $r: red($color);
+  $g: green($color);
+  $b: blue($color);
+
+  @if($r <= 0.03928) {
+    $r: $r / 12.92;
+  } @else {
+    $r: pow(($r + 0.055) / 1.055, 2.4);
+  }
+
+  @debug $r;
+  @return $r;
+}
+
+@function checkColorContrast($colorA, $colorB) {
+  $luminanceA: getLuminance($colorA);
+  $luminanceB: getLuminance($colorB);
+
+  $contrast: (min($luminanceA, $luminanceB) + 0.05) / (max($luminanceA, $luminanceB) + 0.05);
+
+  @if ($contrast < 3) {
+    @error 'The colors #{$colorA} and #{$colorB} have a contrast of #{$contrast}, which is below the Level AA minimum of 3:1 for "large scale" text (18pt or 14pt bold, or larger).';
+  } @else if ($contrast < 4.5) {
+    @warn 'The colors #{$colorA} and #{$colorB} have a contrast of #{$contrast}, which is below the Level AA minimum of 4.5:1 for regular sized text. (this is no problem if the color is used on "large scale" text)';
+  } @else if ($contrast < 7) {
+    @debug 'The colors #{$colorA} and #{$colorB} have a contrast of #{$contrast}, which is below the Level AAA minimum of 7:1 for regular sized text.';
+  }
+  @return $contrast;
+}
+
+
+
+window, dialog {
+  $contrast: checkColorContrast(#0C0E14, #0C0E14);
+
+  background: #0C0E14;
+  color: calculateContrastColor(#0C0E14)
+}
+
+
+headerbar {
+  padding: 10px;
+  background: #0C0E14;
+
+  button.titlebutton:not(.appmenu) {
+    border-radius: 10px;
+    padding: 7px;
+    background: no-repeat center center;
+
+    &.minimize {
+      background-color: #FDBE3E;
+      &:hover { background-image: -gtk-scaled(url("assets/title-buttons/minimize.svg"), url("assets/title-buttons/minimize@2.svg")); }
+    }
+
+    &.maximize {
+      background-color: #33C748;
+      &:hover { background-image: -gtk-scaled(url("assets/title-buttons/maximize.svg"), url("assets/title-buttons/maximize@2.svg")); }
+    }
+
+    &.close {
+      background-color: #FC5652;
+      &:hover { background-image: -gtk-scaled(url("assets/title-buttons/close.svg"), url("assets/title-buttons/close@2.svg")); }
+    }
+
+    image {
+      margin: -100px;
+    }
+  }
+
+  separator {
+    background: lighten(#1D1F22, 5%);
+    min-width: 1px;
+    margin: 0 5px;
+  }
+
+  button.titlebutton.appmenu {
+    &:not(:active):not(:checked) {
+      background: transparent;
+    }
+
+    + separator {
+      margin-left: 4px;
+      margin-right: 4px;
+      padding: 0;
+    }
+  }
+}
+
+
+button {
+  background: $backgroundSecondContrastColor;
+  color: getForegroundColorForBackgroundColor($backgroundSecondContrastColor);
+  border-radius: 3px;
+  padding: 5px;
+
+  &:hover {
+    background: getHoverColor($backgroundSecondContrastColor);
+    color: getForegroundColorForBackgroundColor(getHoverColor($backgroundSecondContrastColor));
+  }
+
+  &:active {
+    background: $backgroundSecondContrastColor;
+    color: getForegroundColorForBackgroundColor($backgroundSecondContrastColor);
+  }
+
+  &:disabled {
+    color: highlightColorDependingOnLightness($backgroundSecondContrastColor, 8%);
+  }
+
+  &:checked, &.suggested-action {
+    background: $highlightColor;
+    color: getForegroundColorForBackgroundColor($highlightColor);
+
+    &:hover { background: getHoverColor($highlightColor); }
+    &:active { background: $highlightColor; }
+  }
+
+  &.text-button {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+}
+
+
+.linked {
+  button {
+    border-radius: 0;
+    &:first-child { border-radius: 4px 0 0 4px; }
+    &:last-child { border-radius: 0 4px 4px 0; }
+  }
+
+  &.vertical button {
+    &:first-child { border-radius: 4px 4px 0 0; }
+    &:last-child { border-radius: 0 0 4px 4px; }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+widget.view {
+  background: opacify($highlightColor, 0.5);
+  border: 0 solid transparent;
+}
+
+widget.view:selected, widget.view:active{
+  background: $highlightColor;
+  border-radius: 4px;
+  color: #ffffff;
+}
+
+
+notebook {
+  background: #181B28;
+}
+
+
+
+paned > separator {
+  -gtk-icon-source: none;
+  min-width: 1px;
+  min-height: 1px;
+  margin-left: -2px;
+  margin-right: -4px;
+  background: transparent;
+}
+
+
+
+
+
+
+
+
+placessidebar list {
+  background: darken(#181B28, 3%);
+  border-right: 1px solid lighten(#181B28, 2%);
+
+  row {
+    padding: 7px 0;
+
+    &:hover {
+      $backgroundColor: lighten($backgroundSecondContrastColor, 10%);
+      background: $backgroundColor;
+      color: getForegroundColorForBackgroundColor($backgroundColor);
+    }
+
+    &:selected {
+      background: $highlightColor;
+      color: #ffffff;
+    }
+
+    image.sidebar-icon {
+      padding: 0 15px;
+    }
+
+    separator {
+      background: #A5A9A5;
+      margin: 0 10px;
+    }
+  }
+
+}
+
+/*
+window.nautilus-window {
+
+  list {
+
+    padding: 0;
+    margin-top: -2px;
+
+    row {
+      margin-top: -2px;
+      padding: 0;
+
+      image.sidebar-icon:first-child {
+        padding: 10px 15px;
+        background: #1D1F22;
+      }
+
+      label.sidebar-label {
+        padding: 10px;
+      }
+
+    }
+
+    separator {
+      margin-top: -5px;
+      margin-bottom: -2px;
+      padding: 0px;
+      background: #1D1F22;
+    }
+  }
+
+}
+
+
+*/
+
+popover {
+  background: green;
+  background: $backgroundSecondContrastColor;
+  //border: 8px solid $highlightColor;
+
+  box-shadow: 0 0 5px rgba(0,0,0,.4);
+  border-radius: 3px;
+  color: getForegroundColorForBackgroundColor($highlightColor);
+
+  box modelbutton {
+    padding: 5px 5px;
+    border-radius: 3px;
+
+    &:hover {
+      background: getHoverColor($highlightColor);
+    }
+  }
+
+  separator {
+    background: highlightColorDependingOnLightness($highlightColor, 10%);
+    min-height: 1px;
+    margin: 5px 0px;
+  }
+
+  &.menu:first-child {
+    border-top-left-radius: 0;
+  }
+}
+
+popover.menu.background stack {
+  //min-width: 1px;
+}
+
+/*
+popover.menu box modelbutton {
+  padding: 5px 5px;
+  border-radius: 3px;
+}
+
+popover.menu box modelbutton:hover {
+  background: #0A7DF2;
+  color: #ffffff;
+}
+
+popover.menu separator {
+  background: #A5A9A5;
+  min-height: 1px;
+  margin: 5px 10px;
+}
+*/
+
+
+
+/*
+
+
+
+window.popup menu{
+  background: #ffffff;
+  border: 1px solid #A5A9A5;
+}
+
+window.popup menu menuitem {
+  padding: 5px 20px;
+}
+
+window.popup menu menuitem:hover {
+  background: rgba(0,0,0,.1);
+}
+
+window.popup menu separator {
+  background: #A5A9A5;
+  min-height: 1px;
+  margin: 5px 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.linked > entry {
+  background: #2A2D31;
+}
+
+entry image {
+  margin: 6px
+}
+
+entry .entry-tag {
+  background: #1D1F22;
+  border-radius: 3px;
+  margin: 2px 4px 2px 0px;
+  padding: 3px 3px 3px 5px;
+}
+
+entry .button {
+  margin-right: -10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+searchbar {
+  background: lighter(#121213);
+}
+
+entry .entry-tag {
+  background: #1D1F22;
+  border-radius: 3px;
+  margin: 2px 4px 2px 0px;
+  padding: 3px 3px 3px 5px;
+}
+
+entry .button {
+  margin-right: -10px;
+}
+
+
+treeview  {
+  border-bottom: 1px solid lighter(#121213);
+  padding: 0;
+}
+
+treeview:selected {
+  background: #1D1F22;
+}
+
+treeview:first-child {
+  background: green;
+}
+
+treeview header button {
+  border-radius: 0;
+
+  background: #1D1F22;
+  border-bottom: 1px solid lighter(#121213);
+  padding: 10px;
+}
+
+treeview header button:not(:last-child) {
+  border-right: 1px solid lighter(#121213);
+}
+
+treeview rubberband {
+  background: green;
+  margin: 10px;
+  padding: 20px;
+  border: 20px solid orange;
+}
+
+.dim-label {
+  background: green;
+}
+.overlay-indicator {
+  background: green;
+}
+
+
+tabs tab {
+  background: #1D1F22;
+}
+
+tabs tab:hover {
+  background: lighter(#1D1F22);
+}
+
+tabs tab:checked {
+  background: #121213;
+}
+
+tabs tab button {
+  background: transparent;
+}
+
+*/

@@ -1,0 +1,29 @@
+{
+  "name": "phisch",
+  "version": "0.0.1",
+  "description": "this is a gtk3 theme",
+  "scripts": {
+    "build": "node-sass scss/gtk3.scss -o .",
+    "watch": "node-sass scss/gtk3.scss -o . --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phisch/theme.git"
+  },
+  "keywords": [
+    "gtk3",
+    "gtk3-theme",
+    "theme"
+  ],
+  "author": "Philipp Schaffrath",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/phisch/theme/issues"
+  },
+  "homepage": "https://github.com/phisch/theme#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "node-sass": "^4.9.3",
+    "mathsass": "^0.10.1"
+  }
+}
