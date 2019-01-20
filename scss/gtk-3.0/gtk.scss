@@ -1,4 +1,4 @@
-@import '../node_modules/mathsass/dist/math';
+@import '../../node_modules/mathsass/dist/math';
 
 
 $windowBackground: #0C0E14;
@@ -83,8 +83,6 @@ $highlightColor: #007AFF;
 
 
 window, dialog {
-  $contrast: checkColorContrast(#0C0E14, #0C0E14);
-
   background: #0C0E14;
   color: calculateContrastColor(#0C0E14)
 }
