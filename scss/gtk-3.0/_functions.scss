@@ -1,0 +1,15 @@
+@function foreground($color, $percent: $foregroundLightnessDifference) {
+  @if (lightness($color) > 50) {
+    @return darken($color, $percent);
+  } @else {
+    @return lighten($color, $percent);
+  }
+}
+
+@function foregroundHighlight($color) {
+  @return foreground($color, $foregroundLightnessDifference + 20%);
+}
+
+@function foregroundDisabled($color) {
+  @return foreground($color, $foregroundLightnessDifference - 20%);
+}
