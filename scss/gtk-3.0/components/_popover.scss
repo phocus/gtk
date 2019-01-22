@@ -1,0 +1,55 @@
+popover {
+  background: $background-3;
+
+  box-shadow: 0 0 5px rgba(0,0,0,.4);
+  color: foreground($background-3);
+
+  box {
+    modelbutton {
+      padding: 5px 10px;
+
+      margin: 0 -10px;
+
+      &:hover {
+        background: getHoverColor($highlightColor);
+      }
+    }
+
+
+  }
+
+  //& modelbutton:first-child { margin-top: -10px; }
+  //& modelbutton:last-of-type { margin-bottom: -10px; }
+
+  separator {
+    background: foreground($background-3, 7%);
+    margin: 0 -10px;
+    min-height: 1px;
+  }
+
+  &.menu:first-child {
+    border-top-left-radius: 0;
+  }
+}
+
+popover.menu.background stack {
+  //min-width: 1px;
+}
+
+/*
+popover.menu box modelbutton {
+  padding: 5px 5px;
+  border-radius: 3px;
+}
+
+popover.menu box modelbutton:hover {
+  background: #0A7DF2;
+  color: #ffffff;
+}
+
+popover.menu separator {
+  background: #A5A9A5;
+  min-height: 1px;
+  margin: 5px 10px;
+}
+*/
