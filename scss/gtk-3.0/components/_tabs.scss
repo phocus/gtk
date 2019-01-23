@@ -1,0 +1,14 @@
+tabs {
+  tab {
+    padding: 6px 8px;
+    background-color: $background-1;
+
+    &:checked {
+      background-color: $background-2;
+    }
+
+    &:hover:not(:checked), &:active {
+      background: $background-3;
+    }
+  }
+}
