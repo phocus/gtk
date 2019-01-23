@@ -1,0 +1,16 @@
+levelbar {
+  trough {
+    block {
+      padding: 3px;
+
+      &.filled { background: $accent-7; }
+      &.empty { background: $background-3; }
+    }
+  }
+
+  &.discrete {
+    block:not(:first-child) {
+      margin-left: 5px;
+    }
+  }
+}
