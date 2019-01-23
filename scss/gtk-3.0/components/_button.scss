@@ -1,4 +1,22 @@
 button {
+  background: $background-2;
+  padding: 6px 8px;
+  color: foreground($background-2);
+
+  &:disabled {
+    opacity: 0.25;
+  }
+
+  &:checked {
+    background: $accent-7;
+    color: lighten($accent-7, 35%);
+  }
+}
+
+
+
+/*
+button {
   //background: $backgroundSecondContrastColor;
   //color: getForegroundColorForBackgroundColor($backgroundSecondContrastColor);
   //border-radius: 3px;
@@ -46,3 +64,4 @@ button {
     &:last-child { border-radius: 0 0 4px 4px; }
   }
 }
+*/
