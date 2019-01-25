@@ -1,0 +1,18 @@
+separator {
+  background-image: image($background-3);
+  background-size: 1px 1px;
+  background-position: center center;
+
+  min-width: 7px;
+  min-height: 7px;
+
+  &.horizontal, .vertical > & {
+    background-repeat: repeat-x;
+    margin: -3px 0;
+  }
+
+  &.vertical, .horizontal > & {
+    background-repeat: repeat-y;
+    margin: 0 -3px;
+  }
+}
