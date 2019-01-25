@@ -10,5 +10,6 @@ notebook {
 
   stack {
     background: $background-2;
+    &:only-child { background: $background-1; }
   }
 }
