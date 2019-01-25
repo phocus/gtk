@@ -10,13 +10,4 @@ combobox {
       }
     }
   }
-
-  window.popup menu menuitem {
-    background: $background-3;
-    padding: 6px 8px;
-    &:hover {
-      background: $accent-7;
-      color: lighten($accent-7, 35%);
-    }
-  }
 }
