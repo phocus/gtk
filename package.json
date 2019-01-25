@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "this is a gtk3 theme",
   "scripts": {
-    "build": "node-sass scss/ -o",
+    "build": "node-sass scss/ -o .",
     "watch": "node-sass scss/ -o . --watch"
   },
   "repository": {
