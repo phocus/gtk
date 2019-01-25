@@ -1,0 +1,11 @@
+radiobutton {
+  radio {
+    background: $background-2;
+    padding: 1px;
+    border-radius: 10px;
+  }
+
+  label { padding-left: 10px; }
+
+  &:disabled { opacity: 0.25; }
+}

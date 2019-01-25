@@ -1,0 +1,10 @@
+checkbutton {
+  check {
+    background: $background-2;
+    padding: 1px;
+  }
+
+  label { padding-left: 10px; }
+
+  &:disabled { opacity: 0.25; }
+}
