@@ -1,29 +1,7 @@
-placessidebar list {
+// TODO: extract to nautilus specific stylesheet, since this will be removed from gtk because only nautilus uses it
+
+placessidebar  {
   background: $background-3;
-  border-right: 1px solid lighten(#181B28, 2%);
 
-  row {
-    padding: 7px 0;
-
-    &:hover {
-      $backgroundColor: lighten($backgroundSecondContrastColor, 10%);
-      background: $backgroundColor;
-      color: getForegroundColorForBackgroundColor($backgroundColor);
-    }
-
-    &:selected {
-      background: $highlightColor;
-      color: #ffffff;
-    }
-
-    image.sidebar-icon {
-      padding: 0 15px;
-    }
-
-    separator {
-      background: #A5A9A5;
-      margin: 0 10px;
-    }
-  }
-
+  list { background: transparent; }
 }
