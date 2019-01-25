@@ -1,0 +1,10 @@
+switch {
+  background: $background-2;
+  slider {
+    background: $background-3;
+  }
+
+  &:disabled {
+    opacity: 0.25;
+  }
+}
