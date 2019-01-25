@@ -19,4 +19,9 @@ button {
     background: $accent-1;
     color: lighten($accent-1, 30%);
   }
+
+  &.circular {
+    border-radius: 16px;
+    padding: 8px;
+  }
 }
