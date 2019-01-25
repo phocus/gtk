@@ -1,5 +1,6 @@
 checkbutton {
   check {
+    // TODO: use custom asset for checkmark, center correctly and fix paddings
     box-shadow: inset 0 0 0 2px $background-2;
     border-radius: 3px;
     padding: 1px;
@@ -13,6 +14,7 @@ checkbutton {
     }
 
     &:checked {
+      // TODO: define correct foreground color
       color: white;
       &:active { background: transparent; }
     }
