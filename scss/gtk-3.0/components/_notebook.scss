@@ -1,13 +1,4 @@
 notebook {
-  header {
-    border: 1px dashed $background-2;
-
-    &.top { border-bottom: none; }
-    &.right { border-left: none; }
-    &.bottom { border-top: none; }
-    &.left { border-right: none; }
-  }
-
   stack {
     background: $background-2;
     &:only-child { background: $background-1; }
