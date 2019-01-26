@@ -37,13 +37,6 @@ headerbar {
     }
   }
 
-  separator {
-    // todo: do we want separators?
-    //background: $background-3;
-    //min-width: 3px;
-    margin: 0;
-  }
-
   button.titlebutton.appmenu {
     &:not(:active):not(:checked) {
       background: transparent;
