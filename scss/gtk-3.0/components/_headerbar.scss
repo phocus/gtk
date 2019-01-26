@@ -41,11 +41,5 @@ headerbar {
     &:not(:active):not(:checked) {
       background: transparent;
     }
-
-    + separator {
-      margin-left: 4px;
-      margin-right: 4px;
-      padding: 0;
-    }
   }
 }
