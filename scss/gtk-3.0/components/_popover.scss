@@ -16,12 +16,6 @@ popover {
     }
   }
 
-  separator {
-    background: foreground($background-3, 7%);
-    margin: 0 -10px;
-    min-height: 1px;
-  }
-
   &.menu:first-child {
     border-top-left-radius: 0;
   }
