@@ -1,10 +1,10 @@
 button {
-  background: $background-2;
-  padding: 6px 8px;
-  color: foreground($background-2);
+  background: rgba(255,255,255, 0.05);
+  padding: 8px;
+  color: $foreground-color;
 
-  &:hover { background: lighten($background-2, 3%); }
-  &:active { background: lighten($background-2, 6%); }
+  &:hover { background: rgba(255,255,255, 0.07); }
+  &:active { background: rgba(255,255,255, 0.1); }
   &:disabled { opacity: 0.25; }
 
   &:checked, &.suggested-action {
@@ -23,5 +23,17 @@ button {
   &.circular {
     border-radius: 16px;
     padding: 8px;
+  }
+
+  &.flat {
+    background: transparent;
+    &:hover { color: rgba(255,255,255,.7); }
+    &:checked { color: rgba(255,255,255,.8); }
+  }
+
+  &.image-button.text-button {
+    image:first-child {
+      margin-right: 5px;
+    }
   }
 }
