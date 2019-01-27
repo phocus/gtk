@@ -6,10 +6,8 @@ separator {
   min-width: 7px;
   min-height: 7px;
 
-  &.horizontal, .vertical > & {
-    background-repeat: repeat-x;
-    margin: -3px 0;
-  }
+  background-repeat: repeat-x;
+  margin: -3px 0;
 
   &.vertical, .horizontal > & {
     background-repeat: repeat-y;
