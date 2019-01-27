@@ -1,14 +1,17 @@
 tabs {
   tab {
-    padding: 6px 8px;
-    background-color: $background-1;
+    padding: 8px 20px;
 
     &:checked {
+      border: 0;
       background-color: $background-2;
     }
 
     &:hover:not(:checked), &:active {
-      background: $background-3;
+      background: lighten($background-1, 1%);
     }
+
+    header.top &, header.bottom & { border-right: 1px solid $background-2; }
+    header.right &, header.left & { border-bottom: 1px solid $background-2; }
   }
 }
