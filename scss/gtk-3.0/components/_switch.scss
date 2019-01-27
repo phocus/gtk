@@ -1,7 +1,23 @@
 switch {
   background: $background-2;
+  border-radius: 20px;
+  color: transparent;
+  padding: 2px 0;
+
   slider {
-    background: $background-3;
+    background: rgba(255,255,255,0.5);
+    padding: 2px;
+    margin: 0 2px;
+    border-radius: 100%;
+    min-width: 12px;
+    min-height: 12px;
+  }
+
+  &:checked {
+    background: $accent-7;
+    slider {
+      background: rgba(255,255,255,0.8);
+    }
   }
 
   &:disabled {
