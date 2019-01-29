@@ -1,12 +1,13 @@
 checkbutton {
   check {
-    // TODO: use custom asset for checkmark, center correctly and fix paddings
-    box-shadow: inset 0 0 0 2px $background-2;
+    border: 2px solid $background-2;
     border-radius: 3px;
     padding: 1px;
+    min-width: 12px;
+    min-height: 12px;
 
     &:hover, &:checked {
-      box-shadow: inset 0 0 0 2px $primary-accent;
+      border-color: $primary-accent;
     }
 
     &:active, &:checked {
@@ -14,8 +15,8 @@ checkbutton {
     }
 
     &:checked {
-      // TODO: define correct foreground color
-      color: white;
+      -gtk-icon-source: -gtk-recolor(url('../assets/symbolic/check.symbolic.png'));
+      color: rgba(255,255,255, .8);
       &:active { background: transparent; }
     }
   }
