@@ -1,39 +1,35 @@
 headerbar {
-  padding: 0px;
   background: $background-2;
 
+  button {
+    min-height: 18px;
+    min-width: 18px;
+  }
+
   button.titlebutton:not(.appmenu) {
-    margin-left: -6px;
-    padding: 16px;
-    background: no-repeat center center;
-    //transition: background-color 0.2s ease, background-image 0.2s ease;
+    background: transparent;
 
-    &.minimize {
-      background-image: -gtk-scaled(url("../assets/title-buttons/minimize.svg"), url("../assets/title-buttons/minimize@2.svg"));
-      &:hover {
-        background-color: $accent-3;
-        background-image: -gtk-scaled(url("../assets/title-buttons/minimize_dark.svg"), url("../assets/title-buttons/minimize_dark@2.svg"));
+    $titlebutton_to_color: (
+      minimize: $accent-3,
+      maximize: $accent-4,
+      close: $accent-1
+    );
+
+    @each $type, $color in $titlebutton_to_color {
+      &.#{$type} {
+        color: $color;
+        &:hover {
+          background-color: $color;
+        }
       }
     }
 
-    &.maximize {
-      background-image: -gtk-scaled(url("../assets/title-buttons/maximize.svg"), url("../assets/title-buttons/maximize@2.svg"));
-      &:hover {
-        background-color: $accent-4;
-        background-image: -gtk-scaled(url("../assets/title-buttons/maximize_dark.svg"), url("../assets/title-buttons/maximize_dark@2.svg"));
-      }
+    &:hover {
+      color: rgba(0,0,0,0.5);
     }
 
-    &.close {
-      background-image: -gtk-scaled(url("../assets/title-buttons/close.svg"), url("../assets/title-buttons/close@2.svg"));
-      &:hover {
-        background-color: $accent-1;
-        background-image: -gtk-scaled(url("../assets/title-buttons/close_dark.svg"), url("../assets/title-buttons/close_dark@2.svg"));
-      }
-    }
-
-    image {
-      margin: -100px;
+    &:nth-last-child(-n+2) {
+      margin-left: -6px;
     }
   }
 
