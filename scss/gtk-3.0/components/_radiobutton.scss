@@ -1,12 +1,13 @@
 radiobutton {
   radio {
-    // TODO: use custom asset for radiomark, center correctly and fix paddings
-    box-shadow: inset 0 0 0 2px $background-2;
-    border-radius: 10px;
-    padding: 0px;
+    border: 2px solid $background-2;
+    border-radius: 100%;
+    padding: 3px;
+    min-width: 8px;
+    min-height: 8px;
 
     &:hover, &:checked {
-      box-shadow: inset 0 0 0 2px $primary-accent;
+      border-color: $primary-accent;
     }
 
     &:active, &:checked {
@@ -14,9 +15,8 @@ radiobutton {
     }
 
     &:checked {
-      // TODO: define correct foreground color
-      color: white;
-      &:active { background: transparent; }
+      -gtk-icon-source: -gtk-recolor(url('../assets/radio.symbolic.png'));
+      color: rgba(255,255,255, .8);
     }
   }
 
