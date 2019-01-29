@@ -1,7 +1,24 @@
 // TODO: extract to nautilus specific stylesheet, since this will be removed from gtk because only nautilus uses it
-
+// TODO: refactor this!
 placessidebar  {
-  background: $background-3;
+  background: linear-gradient(to right, darken($background-3, 2%) 0, darken($background-3, 2%) 38px, $background-3 38px, $background-3 100%);
 
-  list { background: transparent; }
+  list {
+    background: transparent;
+
+    row {
+      &:hover {
+        background: rgba(0,0,0,0.2);
+      }
+
+      .sidebar-icon {
+        margin-left: 5px;
+        margin-right: 20px;
+      }
+    }
+  }
+
+  &.frame, .frame {
+    border: 0;
+  }
 }
