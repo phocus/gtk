@@ -23,7 +23,6 @@
   "homepage": "https://github.com/phisch/theme#readme",
   "dependencies": {},
   "devDependencies": {
-    "node-sass": "^4.9.3",
-    "mathsass": "^0.10.1"
+    "node-sass": "^4.9.3"
   }
 }
