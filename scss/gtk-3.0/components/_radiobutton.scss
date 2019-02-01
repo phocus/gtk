@@ -15,7 +15,7 @@ radiobutton {
     }
 
     &:checked {
-      -gtk-icon-source: -gtk-recolor(url('../assets/radio.symbolic.png'));
+      -gtk-icon-source: -gtk-recolor(url('../assets/symbolic/radio.symbolic.png'));
       color: rgba(255,255,255, .8);
     }
   }
