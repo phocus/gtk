@@ -2,8 +2,8 @@ headerbar {
   background: $background-2;
 
   button {
-    min-height: 18px;
-    min-width: 18px;
+    min-height: calc(1em + 6px);
+    min-width: calc(1em + 6px);
   }
 
   button.titlebutton:not(.appmenu) {
