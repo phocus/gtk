@@ -1,10 +1,10 @@
 button {
   background: rgba(255,255,255, 0.05);
-  padding: $padding;
+  padding: 8px;
 
   &:hover { background: rgba(255,255,255, 0.07); }
   &:active { background: rgba(255,255,255, 0.1); }
-  &:disabled { opacity: $disabledOpacity; }
+  &:disabled { opacity: 0.3; }
 
   &:checked, &.suggested-action {
     background: $accent-7;
@@ -21,7 +21,7 @@ button {
 
   &.circular {
     border-radius: 100%;
-    padding: $padding;
+    padding: 8px;
   }
 
   &.flat {
