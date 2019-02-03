@@ -1,4 +1,8 @@
 window, dialog {
   background: $background-1;
-  color: foreground($background-1)
+  color: foreground($background-1);
+
+  decoration {
+    margin: 10px;
+  }
 }
