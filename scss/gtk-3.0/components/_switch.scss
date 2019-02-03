@@ -2,16 +2,14 @@ switch {
   background: $background-2;
   border-radius: 20px;
   color: transparent;
-  padding: 2px 0;
+  padding: 2px;
   font-size: 0;
 
   slider {
     background: rgba(255,255,255,0.5);
-    padding: 2px;
-    margin: 0 2px;
     border-radius: 100%;
-    min-width: 12px;
-    min-height: 12px;
+    min-width: 18px;
+    min-height: 18px;
   }
 
   &:checked {
