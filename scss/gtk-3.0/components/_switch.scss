@@ -19,7 +19,5 @@ switch {
     }
   }
 
-  &:disabled {
-    opacity: 0.25;
-  }
+  &:disabled { opacity: 0.3; }
 }

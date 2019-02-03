@@ -30,7 +30,5 @@ scale {
   &.horizontal highlight { background-image: linear-gradient(to right, $accent-7, $accent-4); }
   &.vertical highlight { background-image: linear-gradient(to bottom, $accent-7, $accent-4); }
 
-  &:disabled {
-    opacity: 0.25;
-  }
+  &:disabled { opacity: 0.3; }
 }

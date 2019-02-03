@@ -9,7 +9,5 @@ spinner {
     animation: rotate 1s linear infinite;
   }
 
-  &:disabled {
-    opacity: 0.2;
-  }
+  &:disabled { opacity: 0.3; }
 }
