@@ -1,3 +1,14 @@
 textview {
-  background: $background-2;
+  transition: background 100ms ease-in-out;
+
+  background: transparentize(white, 0.95);
+  padding: 8px;
+
+  &:focus {
+    background: transparentize(white, 0.9);
+  }
+
+  &:disabled {
+    opacity: 0.3;
+  }
 }
