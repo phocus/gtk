@@ -1,11 +1,22 @@
 entry {
-  background: $background-2;
-  padding: 6px 8px;
+  transition: all 100ms ease-in-out;
+
+  background: transparentize(white, 0.95);
+
+  border-left: 2px solid $background-2;
+  padding: 8px 8px 8px 6px;
 
   &:focus {
-    border: 1px solid $accent-7;
-    padding: 5px 7px;
+    border-left-color: $accent-7;
+    background: transparentize(white, 0.9);
   }
 
-  &:disabled { opacity: 0.3; }
+  &:disabled {
+    opacity: 0.3;
+  }
+
+  image {
+    &.left { margin-right: 8px; }
+    &.right { margin-left: 8px; }
+  }
 }
