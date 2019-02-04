@@ -1,7 +1,9 @@
 combobox {
   button {
     &.combo {
-      cellview {}
+      cellview {
+        margin: -2px;
+      }
       arrow {
         margin: -6px -8px;
         padding: 8px;
