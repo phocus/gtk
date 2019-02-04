@@ -3,7 +3,7 @@ entry {
 
   background: transparentize(white, 0.95);
 
-  border-left: 2px solid $background-2;
+  border-left: 2px solid transparent;
   padding: 8px 8px 8px 6px;
 
   &:focus {
