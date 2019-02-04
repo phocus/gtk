@@ -1,22 +1,21 @@
 button {
-  background: rgba(255,255,255, 0.05);
+  transition: background-color 100ms ease-in;
+  background: transparentize(white, 0.95);
   padding: 8px;
 
-  &:hover { background: rgba(255,255,255, 0.07); }
-  &:active { background: rgba(255,255,255, 0.1); }
+  &:hover:not(:active) { background: transparentize(white, 0.9); }
   &:disabled { opacity: 0.3; }
 
   &:checked, &.suggested-action {
     background: $accent-7;
-    color: lighten($accent-7, 35%);
-
-    &:hover { background: lighten($accent-7, 3%); }
-    &:active { background: lighten($accent-7, 6%); }
+    color: lighten($accent-7, 40%);
+    &:hover:not(:active) { background: darken($accent-7, 5%); }
   }
 
   &.destructive-action {
     background: $accent-1;
-    color: lighten($accent-1, 30%);
+    color: lighten($accent-1, 40%);
+    &:hover:not(:active) { background: darken($accent-1, 5%); }
   }
 
   &.circular {
@@ -28,11 +27,5 @@ button {
     background: transparent;
     &:hover { color: rgba(255,255,255,.7); }
     &:checked { color: rgba(255,255,255,.8); }
-  }
-
-  &.image-button.text-button {
-    image:first-child {
-      margin-right: 5px;
-    }
   }
 }
