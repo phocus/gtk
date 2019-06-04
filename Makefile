@@ -3,7 +3,7 @@ DESTDIR ?=
 INSTALL_DIR ?= $(DESTDIR)$(PREFIX)/share/themes/phocus
 
 all:
-	npm run build
+	npm install && npm run build
 
 install:
 	@install -v -d "$(INSTALL_DIR)"
