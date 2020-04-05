@@ -1,23 +1,37 @@
 switch {
-  background: $background-2;
+  background: transparentize($foreground-color, 0.8);
   border-radius: 20px;
   color: transparent;
-  padding: 2px;
-  font-size: 0;
+  min-width: 40px;
+  border: 5px solid transparent;
+  background-clip: padding-box;
 
   slider {
-    background: rgba(255,255,255,0.5);
+    background: $foreground-color;
     border-radius: 100%;
-    min-width: 18px;
-    min-height: 18px;
+    min-width: 5px;
+    min-height: 5px;
+    background-clip: padding-box;
+    margin: -4px -2px;
   }
 
   &:checked {
-    background: $accent-7;
+    background: transparentize($primary-accent, 0.7);
+    background-clip: content-box;
     slider {
-      background: rgba(255,255,255,0.8);
+      background: $primary-accent;
     }
   }
 
   &:disabled { opacity: 0.3; }
+
+  &:hover {
+    slider {
+      box-shadow: 0 0 0 8px rgba(255,255,255,0.05);
+    }
+
+    &:checked slider {
+      box-shadow: 0 0 0 8px transparentize($accent-7, 0.9);
+    }
+  }
 }
