@@ -2,8 +2,9 @@ levelbar {
   trough {
     block {
       padding: 3px;
+      border-radius: 3px;
 
-      &.filled { background: $accent-7; }
+      &.filled { background: $secondary-accent; }
       &.empty { background: $background-3; }
     }
   }
