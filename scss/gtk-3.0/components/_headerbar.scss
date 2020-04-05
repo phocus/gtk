@@ -1,13 +1,28 @@
 headerbar {
   background: $background-2;
+  padding: 6px;
 
-  button {
-    min-height: calc(1em + 6px);
-    min-width: calc(1em + 6px);
+  box.horizontal {
+    &.right > button.titlebutton:last-child {
+      margin-right: -6px;
+    }
+
+    &.left > button.titlebutton:first-child {
+      margin-left: -6px;
+    }
   }
 
   button.titlebutton:not(.appmenu) {
     background: transparent;
+    min-height: auto;
+    margin: -6px 0;
+    height: auto;
+    padding: 15px 10px;
+    border-radius: 0;
+
+    &:nth-last-child(-n+2) {
+      margin-left: -6px;
+    }
 
     $titlebutton_to_color: (
       minimize: $accent-3,
@@ -26,10 +41,6 @@ headerbar {
 
     &:hover {
       color: rgba(0,0,0,0.5);
-    }
-
-    &:nth-last-child(-n+2) {
-      margin-left: -6px;
     }
   }
 
