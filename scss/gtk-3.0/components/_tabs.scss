@@ -1,17 +1,50 @@
 tabs {
+  background: $background-1;
+
+  .top > & {
+    border-bottom: 2px solid $background-3;
+    tab {
+      border-bottom: 2px solid transparent;
+      margin-bottom: -2px;
+    }
+  }
+
+  .right > & {
+    border-left: 2px solid $background-3;
+    tab {
+      border-left: 2px solid transparent;
+      margin-left: -2px;
+    }
+  }
+
+  .bottom > & {
+    border-top: 2px solid $background-3;
+    tab {
+      border-top: 2px solid transparent;
+      margin-top: -2px;
+    }
+  }
+
+  .left > & {
+    border-right: 2px solid $background-3;
+    tab {
+      border-right: 2px solid transparent;
+      margin-right: -2px;
+    }
+  }
+
   tab {
-    padding: 8px 20px;
+    padding: 8px;
+    color: transparentize($foreground-color, 0.8);
+    transition: border-color 100ms ease-in-out;
 
-    &:checked {
-      border: 0;
-      background-color: $background-2;
+    header &:checked {
+      border-color: $primary-accent;
+      color: $foreground-color;
     }
 
-    &:hover:not(:checked), &:active {
-      background: lighten($background-1, 1%);
+    header &:hover:not(:checked) {
+      border-color: transparentize($foreground-color, 0.8);
     }
-
-    header.top &, header.bottom & { border-right: 1px solid $background-2; }
-    header.right &, header.left & { border-bottom: 1px solid $background-2; }
   }
 }
