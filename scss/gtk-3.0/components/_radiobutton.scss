@@ -1,26 +1,32 @@
 radiobutton {
   radio {
-    border: 2px solid $background-2;
+    -gtk-icon-source: -gtk-recolor(url('../assets/symbolic/radio.symbolic.png'));
+    -gtk-icon-transform: scale(0);
+    color: rgba(255,255,255, .8);
+    border: 2px solid rgba(255,255,255,0.05);
     border-radius: 100%;
     padding: 3px;
     min-width: 8px;
     min-height: 8px;
 
-    &:hover, &:checked {
-      border-color: $primary-accent;
+    // TODO: extract transitions into separate directory
+    transition: -gtk-icon-transform 200ms;
+
+    &:hover {
+      border-color: rgba(255,255,255,0.1);
     }
 
     &:active, &:checked {
-      background: $primary-accent;
+      background: rgba(255,255,255,0.02);
     }
 
     &:checked {
-      -gtk-icon-source: -gtk-recolor(url('../assets/symbolic/radio.symbolic.png'));
-      color: rgba(255,255,255, .8);
+      -gtk-icon-transform: scale(1);
+      border-color: $primary-accent;
     }
   }
 
   label { padding-left: 5px; }
 
-  &:disabled { opacity: 0.3; }
+  &:disabled { opacity: 0.38; }
 }
