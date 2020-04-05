@@ -1,13 +1,12 @@
 entry {
   transition: all 100ms ease-in-out;
-
   background: transparentize(white, 0.95);
-
-  border-left: 2px solid transparent;
-  padding: 8px 8px 8px 6px;
+  border: 2px solid transparent;
+  padding: 6px;
+  border-radius: 5px;
 
   &:focus {
-    border-left-color: $accent-7;
+    border-color: $accent-7;
     background: transparentize(white, 0.9);
   }
 
