@@ -1,10 +1,10 @@
 {
   "name": "phisch",
   "version": "0.0.1",
-  "description": "gtk theme based on the phocus colors",
+  "description": "GTK3 theme based on the Phocus colors.",
   "scripts": {
-    "build": "node-sass scss/ -o .",
-    "watch": "node-sass scss/ -o . --watch"
+    "build": "sass scss:.",
+    "watch": "sass scss:. --watch"
   },
   "repository": {
     "type": "git",
@@ -23,6 +23,6 @@
   "homepage": "https://github.com/phocus/gtk#readme",
   "dependencies": {},
   "devDependencies": {
-    "node-sass": "^4.14.1"
+    "sass": "^1.32.6"
   }
 }
