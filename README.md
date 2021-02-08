@@ -23,14 +23,12 @@ paru -S phocus-gtk-theme-git
 
 ## Development
 To make development as easy as possible, clone the repository and symlink it into your users `~/.themes` directory:
-
 ```bash
 git clone https://github.com/phocus/gtk.git ~/code/phocus
 ln -s ~/code/phocus ~/.themes/phocus
 ```
 
 Install its npm dependencies:
-
 ```bash
 cd ~/.themes/phocus
 npm install
@@ -39,7 +37,6 @@ npm install
 ### Build
 Build the theme by running its build script:
 ```bash
-cd ~/themes/phocus
 npm run build
 ```
 
@@ -49,3 +46,20 @@ Start a watcher that automatically builds when you modify a file:
 cd ~/themes/phocus
 npm run watch
 ```
+
+### Reload GTK Theme
+Make all open GTK applications reload the phocus theme by running:
+```bash
+npm run reload_gtk_theme
+```
+
+This requires you to have [xsettingsd](https://github.com/derat/xsettingsd) installed.
+
+### Watch and rebuild - *ultimate comfort*
+Automatically build on modifications, and make all open GTK applications reload the phocus theme:
+```bash
+npm run watch_and_reload
+```
+
+Enjoy this quick demo of the ultimate comfort workflow:
+![ultimate comfort demo](https://i.imgur.com/UjUpmG1.gif)
