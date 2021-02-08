@@ -55,7 +55,7 @@ npm run reload_gtk_theme
 
 This requires you to have [xsettingsd](https://github.com/derat/xsettingsd) installed.
 
-### Watch and rebuild - *ultimate comfort*
+### Watch and reload - *ultimate comfort*
 Automatically build on modifications, and make all open GTK applications reload the phocus theme:
 ```bash
 npm run watch_and_reload
