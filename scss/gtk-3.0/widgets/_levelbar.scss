@@ -1,11 +1,13 @@
+@use '../colors';
+
 levelbar {
   trough {
     block {
       padding: 3px;
       border-radius: 3px;
 
-      &.filled { background: $secondary-accent; }
-      &.empty { background: $background-3; }
+      &.filled { background: colors.$secondary-accent; }
+      &.empty { background: colors.$background-3; }
     }
   }
 

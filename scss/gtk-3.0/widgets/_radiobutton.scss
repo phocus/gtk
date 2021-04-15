@@ -1,3 +1,5 @@
+@use '../colors';
+
 radiobutton {
   radio {
     -gtk-icon-source: -gtk-recolor(url('../assets/symbolic/radio.symbolic.png'));
@@ -22,7 +24,7 @@ radiobutton {
 
     &:checked {
       -gtk-icon-transform: scale(1);
-      border-color: $primary-accent;
+      border-color: colors.$primary-accent;
     }
   }
 

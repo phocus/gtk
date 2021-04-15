@@ -1,4 +1,6 @@
+@use '../colors';
+
 window, dialog {
-  background: $background-1;
-  color: $foreground-color;
+  background: colors.$background-1;
+  color: colors.$foreground-color;
 }

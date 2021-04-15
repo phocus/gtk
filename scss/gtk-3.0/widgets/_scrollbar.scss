@@ -1,3 +1,5 @@
+@use '../colors';
+
 scrollbar {
   -GtkScrollbar-has-backward-stepper: false;
   -GtkScrollbar-has-forward-stepper: false;
@@ -11,7 +13,7 @@ scrollbar {
       background: rgba(255,255,255,0.1);
     }
     &:active {
-      background: transparentize($primary-accent, 0.25);
+      background: transparentize(colors.$primary-accent, 0.25);
     }
   }
 

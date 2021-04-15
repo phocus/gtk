@@ -1,3 +1,5 @@
+@use '../colors';
+
 window.background.chromium {
-  background-color: lighten($background-3,1%);
+  background-color: lighten(colors.$background-3, 1%);
 }

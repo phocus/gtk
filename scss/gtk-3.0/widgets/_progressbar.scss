@@ -1,12 +1,14 @@
+@use '../colors';
+
 progressbar {
 
   trough {
-    background: $background-3;
+    background: colors.$background-3;
     progress {
 
     }
   }
 
-  &.horizontal progress { background-image: linear-gradient(to right, $accent-7, $accent-4); }
-  &.vertical progress { background-image: linear-gradient(to bottom, $accent-7, $accent-4); }
+  &.horizontal progress { background-image: linear-gradient(to right, colors.$accent-7, colors.$accent-4); }
+  &.vertical progress { background-image: linear-gradient(to bottom, colors.$accent-7, colors.$accent-4); }
 }

@@ -1,5 +1,7 @@
+@use '../colors';
+
 tooltip {
-  background: $primary-accent;
+  background: colors.$primary-accent;
 
   label {
     padding: 2px;

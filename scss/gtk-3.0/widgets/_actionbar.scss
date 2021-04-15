@@ -1,4 +1,6 @@
+@use '../colors';
+
 actionbar {
-  background: $background-2;
-  border-top: 1px solid $background-3;
+  background: colors.$background-2;
+  border-top: 1px solid colors.$background-3;
 }

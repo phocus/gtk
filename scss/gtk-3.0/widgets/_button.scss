@@ -1,3 +1,5 @@
+@use '../colors';
+
 button {
   transition: background-color 100ms ease-in;
   background: transparentize(white, 0.95);
@@ -7,15 +9,15 @@ button {
   &:disabled { opacity: 0.3; }
 
   &:checked, &.suggested-action {
-    background: $accent-7;
-    color: lighten($accent-7, 40%);
-    &:hover:not(:active) { background: darken($accent-7, 5%); }
+    background: colors.$accent-7;
+    color: lighten(colors.$accent-7, 40%);
+    &:hover:not(:active) { background: darken(colors.$accent-7, 5%); }
   }
 
   &.destructive-action {
-    background: $accent-1;
-    color: lighten($accent-1, 40%);
-    &:hover:not(:active) { background: darken($accent-1, 5%); }
+    background: colors.$accent-1;
+    color: lighten(colors.$accent-1, 40%);
+    &:hover:not(:active) { background: darken(colors.$accent-1, 5%); }
   }
 
   &.circular {

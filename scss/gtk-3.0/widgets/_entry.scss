@@ -1,3 +1,5 @@
+@use '../colors';
+
 entry {
   transition: all 100ms ease-in-out;
   background: transparentize(white, 0.95);
@@ -6,7 +8,7 @@ entry {
   border-radius: 5px;
 
   &:focus {
-    border-color: $accent-7;
+    border-color: colors.$accent-7;
     background: transparentize(white, 0.9);
   }
 

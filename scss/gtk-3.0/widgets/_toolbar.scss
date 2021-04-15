@@ -1,7 +1,9 @@
+@use '../colors';
+
 toolbar {
-  background: $background-2;
+  background: colors.$background-2;
   &.osd {
-    background: transparentize($background-3, 0.5);
+    background: transparentize(colors.$background-3, 0.5);
     padding: 10px;
   }
 }

@@ -1,3 +1,5 @@
+@use '../colors';
+
 window.nautilus-window {
   .nautilus-menu-sort-heading {
     margin: 0 -5px;
@@ -13,8 +15,8 @@ window.nautilus-window {
 
   // this is the floating bar usually shown at the bottom right of nautilus when elements are selected
   .floating-bar {
-    background: $background-2;
-    color: $foreground-color;
+    background: colors.$background-2;
+    color: colors.$foreground-color;
     padding: 4px;
 
     &.bottom.left {

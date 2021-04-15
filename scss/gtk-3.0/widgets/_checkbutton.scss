@@ -1,3 +1,5 @@
+@use '../colors';
+
 checkbutton {
   check {
     -gtk-icon-source: -gtk-recolor(url('../assets/symbolic/check.symbolic.png'));
@@ -13,16 +15,16 @@ checkbutton {
     transition: -gtk-icon-transform 200ms;
 
     &:hover, &:checked {
-      border-color: $primary-accent;
+      border-color: colors.$primary-accent;
     }
 
     &:active, &:checked {
-      background: $primary-accent;
+      background: colors.$primary-accent;
     }
 
     &:checked {
       -gtk-icon-transform: scale(1);
-      border-color: $primary-accent;
+      border-color: colors.$primary-accent;
       &:active { background: transparent; }
     }
   }

@@ -1,6 +1,8 @@
+@use '../colors';
+
 // TODO: extract to nautilus specific stylesheet, since this will be removed from gtk because only nautilus uses it
 placessidebar  {
-  background: $background-3;
+  background: colors.$background-3;
 
   list {
     background: transparent;

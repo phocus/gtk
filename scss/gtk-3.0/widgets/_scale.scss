@@ -1,12 +1,14 @@
+@use '../colors';
+
 scale {
   padding: 8px 0;
 
   contents {
 
     trough {
-      background: $background-3;
+      background: colors.$background-3;
       slider {
-        background: lighten($background-3, 25%);
+        background: lighten(colors.$background-3, 25%);
         padding: 8px;
         margin: -5px;
         border-radius: 100%;
@@ -20,15 +22,15 @@ scale {
     mark {
       padding-top: 5px;
       indicator {
-        color: $background-3;
+        color: colors.$background-3;
         min-height: 8px;
         min-width: 1px;
       }
     }
   }
 
-  &.horizontal highlight { background-image: linear-gradient(to right, $accent-7, $accent-4); }
-  &.vertical highlight { background-image: linear-gradient(to bottom, $accent-7, $accent-4); }
+  &.horizontal highlight { background-image: linear-gradient(to right, colors.$accent-7, colors.$accent-4); }
+  &.vertical highlight { background-image: linear-gradient(to bottom, colors.$accent-7, colors.$accent-4); }
 
   &:disabled { opacity: 0.3; }
 }

@@ -1,5 +1,7 @@
+@use '../colors';
+
 notebook {
   stack {
-    &:only-child { background: $background-1; }
+    &:only-child { background: colors.$background-1; }
   }
 }

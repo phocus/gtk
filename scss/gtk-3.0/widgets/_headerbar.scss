@@ -1,5 +1,7 @@
+@use '../colors';
+
 headerbar {
-  background: $background-2;
+  background: colors.$background-2;
   padding: 6px;
 
   box.horizontal {
@@ -25,9 +27,9 @@ headerbar {
     }
 
     $titlebutton_to_color: (
-      minimize: $accent-3,
-      maximize: $accent-4,
-      close: $accent-1
+      minimize: colors.$accent-3,
+      maximize: colors.$accent-4,
+      close: colors.$accent-1
     );
 
     @each $type, $color in $titlebutton_to_color {

@@ -1,5 +1,2 @@
-@import "config";
-@import "colors";
-@import "functions";
-@import "widgets";
-@import "applications";
+@use "applications";
+@use "widgets";
