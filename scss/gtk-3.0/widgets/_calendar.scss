@@ -1,11 +1,10 @@
 @use '../colors';
 
 calendar {
-  border: 1px solid colors.$background-3;
-  background: colors.$background-2;
+  background: colors.$surface-2;
 
   &.button {
-    background: colors.$background-3;
+    background: colors.$surface-3;
     color: rgba(255,255,255,0.5);
 
     &:hover { color: rgba(255,255,255,0.8); }
@@ -13,7 +12,8 @@ calendar {
   }
 
   &.header {
-    background: colors.$background-3;
+    background: colors.$surface-3;
+
   }
 
   &.highlight {
@@ -22,7 +22,8 @@ calendar {
 
   &:selected {
     color: white;
-    background: colors.$accent-7;
+    border-radius: 0.3em;
+    background: colors.$primary-accent;
   }
 
   &:indeterminate {

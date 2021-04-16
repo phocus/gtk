@@ -2,13 +2,13 @@
 
 frame {
   &.app-notification border {
-    background: colors.$background-3;
+    background: colors.$surface-3;
     border: 0;
   }
 }
 
 frame > border, .frame {
-  border: 1px solid colors.$background-3;
+  border: 1px solid colors.$surface-3;
 }
 
 scrolledwindow {

@@ -1,12 +1,12 @@
 @use '../colors';
 
 list {
-  background: colors.$background-2;
+  background: colors.$surface-2;
 
   row {
     padding: 6px;
     &:hover {
-      background: colors.$background-3;
+      background: colors.$surface-3;
     }
   }
 }

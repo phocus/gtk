@@ -1,6 +1,6 @@
 @use '../colors';
 
-@mixin overshoot($side, $color: colors.$background-3) {
+@mixin overshoot($side, $color: colors.$surface-3) {
   $position-per-side: (
     top: center top,
     right: right center,

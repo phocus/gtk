@@ -3,7 +3,7 @@
 // TODO: find consistent way to remove top and bottom space through negative margins
 
 popover {
-  background: colors.$background-3;
+  background: colors.$surface-3;
   box-shadow: 0 0 5px rgba(0,0,0,.4);
 
   box {
@@ -12,7 +12,7 @@ popover {
       margin: 0 -10px;
 
       &:hover {
-        background: lighten(colors.$background-3, 10%);
+        background: lighten(colors.$surface-3, 10%);
       }
     }
   }
