@@ -13,4 +13,9 @@ textview {
   &:disabled {
     opacity: 0.3;
   }
+
+  selection {
+    background: colors.$primary-accent;
+    color: lighten(colors.$foreground-color, 50%);
+  }
 }

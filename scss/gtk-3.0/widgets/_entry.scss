@@ -20,4 +20,9 @@ entry {
     &.left { margin-right: 8px; }
     &.right { margin-left: 8px; }
   }
+
+  selection {
+    background: colors.$primary-accent;
+    color: lighten(colors.$foreground-color, 50%);
+  }
 }
