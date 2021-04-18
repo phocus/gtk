@@ -13,7 +13,9 @@ scale {
         margin: -5px;
         border-radius: 100%;
       }
-      highlight { }
+      highlight {
+        background: colors.$primary-accent;
+      }
     }
   }
 
@@ -28,9 +30,6 @@ scale {
       }
     }
   }
-
-  &.horizontal highlight { background-image: linear-gradient(to right, colors.$accent-7, colors.$accent-4); }
-  &.vertical highlight { background-image: linear-gradient(to bottom, colors.$accent-7, colors.$accent-4); }
 
   &:disabled { opacity: 0.3; }
 }
