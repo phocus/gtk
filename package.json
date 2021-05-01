@@ -4,7 +4,7 @@
   "description": "GTK3 theme based on the Phocus colors.",
   "scripts": {
     "build": "sass scss:.",
-    "watch": "sass scss:. --watch --no-source-map --color",
+    "watch": "sass scss:. -w --no-source-map --color",
     "reload_gtk_theme": "xsettingsd -c <(echo 'Net/ThemeName \"phocus\"') >/dev/null 2>&1 & sleep 0.2 && kill $!",
     "watch_and_reload": "npm run watch | tee /dev/tty | grep --line-buffered 'Compiled' | while read -r l; do npm run reload_gtk_theme --silent; done;"
   },
@@ -23,8 +23,7 @@
     "url": "https://github.com/phocus/gtk/issues"
   },
   "homepage": "https://github.com/phocus/gtk#readme",
-  "dependencies": {},
   "devDependencies": {
-    "sass": "^1.32.6"
+    "sass": "^1.32.12"
   }
 }
