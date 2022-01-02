@@ -1,22 +1,22 @@
-$surface-1: hsl(240, 3%, 4%);
-$surface-2: hsl(240, 3%, 8%);
-$surface-3: hsl(240, 3%, 12%);
-$surface-4: hsl(240, 3%, 16%);
-$surface-5: hsl(240, 3%, 20%);
+$surface-1: rgb(33,35,50);// Base Background Color
+$surface-2: rgb(33,35,50);// Thunar sidebar,transmission color
+$surface-3: rgb(46,42,49); // Slider,cursor highlight color
+$surface-4: rgb(52,49,70); // Firefox right click menu color
+$surface-5: rgb(248,233,186);
 
 $accent-1: hsl(0,60%,60%);
 $accent-2: hsl(25,60%,60%);
 $accent-3: hsl(55,60%,60%);
-$accent-4: hsl(145,60%,60%);
+$accent-4: rgb(228,210,187);
 $accent-5: hsl(185,60%,60%);
 $accent-6: hsl(240,60%,60%);
-$accent-7: hsl(265,60%,60%);
+$accent-7: rgb(55,56,70); // Current Selected
 $accent-8: hsl(300,60%,60%);
 
 $primary-accent: $accent-7;
 $secondary-accent: $accent-4;
 
-$foreground-color: lighten($surface-5, 45%);
+$foreground-color: $surface-5;
 
 $highlight: rgba(255,255,255,0.15);
 
