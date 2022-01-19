@@ -2,11 +2,11 @@
 
 checkbutton {
   check {
-    -gtk-icon-source: -gtk-recolor(url('../assets/symbolic/check.symbolic.png'));
+    -gtk-icon-source: -gtk-recolor(url('../assets/symbolic/sakura-petal.png'));
     -gtk-icon-transform: scale(0);
-    color: rgba(255,255,255, .8);
+    color: colors.$check;
     border: 2px solid rgba(255,255,255,0.05);
-    border-radius: 3px;
+    border-radius: 2px;
     padding: 1px;
     min-width: 12px;
     min-height: 12px;
@@ -15,16 +15,16 @@ checkbutton {
     transition: -gtk-icon-transform 200ms;
 
     &:hover, &:checked {
-      border-color: colors.$primary-accent;
+      border-color: colors.$check-border;
     }
 
     &:active, &:checked {
-      background: colors.$primary-accent;
+      background: colors.$check-back;
     }
 
     &:checked {
       -gtk-icon-transform: scale(1);
-      border-color: colors.$primary-accent;
+      border-color: colors.$check-checked-border;
       &:active { background: transparent; }
     }
   }

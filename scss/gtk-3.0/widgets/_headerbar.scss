@@ -1,7 +1,7 @@
 @use '../colors';
 
 headerbar {
-  background: colors.$surface-3;
+  background: colors.$headbar;
   padding: 6px;
 
   box.horizontal {
@@ -25,9 +25,9 @@ headerbar {
     }
 
     $titlebutton_to_color: (
-      minimize: colors.$accent-3,
-      maximize: colors.$accent-4,
-      close: colors.$accent-1
+      minimize: colors.$headbar-minimize,
+      maximize: colors.$headbar-maximize,
+      close: colors.$headbar-close,
     );
 
     @each $type, $color in $titlebutton_to_color {
@@ -46,7 +46,26 @@ headerbar {
 
   button.titlebutton.appmenu {
     &:not(:active):not(:checked) {
-      background: transparent;
+      background: cyan;
     }
   }
+  stackswitcher {
+      button {
+          label {
+              padding-left: 13px;
+              padding-right: 13px;
+            }
+          }
+        }
+  button {
+      &.image-button, {
+      background: colors.$headbar-button;
+      color: colors.$headbar-button-text;
+    }
+      &.text-button:not(:radio) {
+        background: colors.$headbar-button;
+        color: colors.$headbar-button-text;
+      }
+    }
 }
+

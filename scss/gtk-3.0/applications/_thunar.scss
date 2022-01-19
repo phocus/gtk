@@ -1,3 +1,12 @@
+@use '../colors';
 .view {
-  background: #232332;
+    background: rgb(40,40,40);
+    &:hover {
+        color: colors.$thunar-hover;
+    &:selected {
+        background: colors.$thunar-selected;
+        color: colors.$thunar-selected-text;
+        }
+    }
 }
+

@@ -5,7 +5,7 @@ entry {
   background: transparentize(white, 0.95);
   border: 2px solid transparent;
   padding: 6px;
-  border-radius: 5px;
+  border-radius: 0px;
 
   &:focus {
     border-color: colors.$accent-7;

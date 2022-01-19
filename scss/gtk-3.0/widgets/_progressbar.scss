@@ -3,9 +3,18 @@
 progressbar {
 
   trough {
-    background: colors.$highlight;
-    progress {
-      background: colors.$secondary-accent;
+    background: colors.$trough;
+    progress.top {
+      background: colors.$prog-grad-ver;
     }
+    progress.left {
+      background: colors.$prog-grad-hor;
+  }
+    progress.right {
+      background: colors.$prog-grad-hor;
+  }
+    progress.bottom {
+      background: colors.$prog-grad-ver;
   }
 }
+ }

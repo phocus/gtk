@@ -1,8 +1,8 @@
-$surface-1: rgb(33,35,50);// Base Background Color
-$surface-2: rgb(33,35,50);// Thunar sidebar,transmission color
-$surface-3: rgb(46,42,49); // Slider,cursor highlight color
+$surface-1: rgba(40,40,40,1.0);// Base Background Color
+$surface-2: rgba(58,83,106,0.0);// Thunar sidebar,transmission color
+$surface-3: rgb(89,89,89); // Slider,cursor highlight color
 $surface-4: rgb(52,49,70); // Firefox right click menu color
-$surface-5: rgb(248,233,186);
+$surface-5: rgb(255,255,255);
 
 $accent-1: hsl(0,60%,60%);
 $accent-2: hsl(25,60%,60%);
@@ -10,7 +10,7 @@ $accent-3: hsl(55,60%,60%);
 $accent-4: rgb(228,210,187);
 $accent-5: hsl(185,60%,60%);
 $accent-6: hsl(240,60%,60%);
-$accent-7: rgb(55,56,70); // Current Selected
+$accent-7: transparentize(#ffd2da, 0.8%); // Current Selected
 $accent-8: hsl(300,60%,60%);
 
 $primary-accent: $accent-7;
@@ -19,6 +19,88 @@ $secondary-accent: $accent-4;
 $foreground-color: $surface-5;
 
 $highlight: rgba(255,255,255,0.15);
+
+// Custom Defined colors
+$spinner-color: pink;
+$progress-background: #afc3c3;
+$progress: pink;
+
+// ==> Progress bar colors <==
+$trough: rgba(40,40,40,0.6);
+
+// Progressbar gradient colors
+$prog-grad1: #ffd2da;
+$prog-grad2: #c0b3c0;
+$prog-grad-hor: linear-gradient(to right,$prog-grad1,$prog-grad2);
+$prog-grad-ver: linear-gradient(to bottom,$prog-grad1,$prog-grad2);
+
+// Switch variables
+$switch-off: rgba(128,128,128,0.4);
+$switch-on: #ffd2da;
+// switch circe color
+$switch-circle-off: $switch-off;
+$switch-circle-on: rgba(#c0b3c0, 0.85);
+
+// Checkbutton colorsc (tick buttons)
+$check: rgba(255,255,255,1.0); // check mark color
+$check-back: rgba(40,40,40,0.6);
+$check-border: $switch-on;
+$check-checked-border: linear-gradient(to right, pink, white);
+$disabled-switch: rgba(grey, 0.5);
+
+// Radio button colors
+$radio: pink;
+$radio-check-border: #ffd2da;
+
+// Button colors 
+$button-checked: $prog-grad-hor;
+$button-checked-text: #191919;
+$button-checked-hover: #c0b3c0;
+
+// Slider colors
+$slider-back: rgba(128,128,128,0.2);
+$slider: linear-gradient(to right,#ffd2fa, #c0b3c0);
+$slider-dot: #ffd2da;
+$slider-marks: #ffd2da;
+$slider-ver: linear-gradient(to bottom, #ffd2fa, #c0b3c0);
+$slider-text: $slider-marks;
+
+// Levelbar colors
+$levelbar-on: $button-checked;
+$levelbar-off: rgba(128,128,128,0.2);
+
+// Headbar colors
+$headbar: darken(rgb(76,76,76), 17%);
+$headbar-close: $accent-4;
+$headbar-maximize: $accent-2;
+$headbar-minimize: $accent-4;
+$headbar-button: linear-gradient(to right, #ffd2da, #c0b3c0);
+$headbar-button-text: #191919;
+// Messagedialog box colors
+$message-dialog: darken(#454545, 10%);
+$message-dialog-border: #ffd2da;
+$message-dialog-button-back: linear-gradient(to right,#dbc2c6,#998f99); 
+$message-dialog-button-text: #191919;
+$message-dialog-hover: #ffd2da;
+
+// Treeview colors
+$treeview: rgba(40,40,40,0.7);
+$treeview-selected: transparentize(grey,0.7);
+$treeview-selected-text: lighten(#ffd2da, 00%);
+$treeview-selected-hover: #ffd2da;
+$treeview-header-separator: #ffd2da;
+$treeview-highlight: #ffd2d0;
+$treeview-button-border: #ffd2da;
+$treeview-button: #444444;
+
+// Thunar colors
+$thunar-hover: #ffd2da;
+$thunar-selected: transparentize(white,0.9);
+$thunar-selected-text: pink;
+
+// Popover colors
+$popup: linear-gradient(to right, #ffd2da, #c0b3c0);
+$popup-text: #191919;
 
 // TODO: is there a better way to do this? this is for example used in gnome-calculator for the result top-border
 @define-color borders #{"" +$surface-2};

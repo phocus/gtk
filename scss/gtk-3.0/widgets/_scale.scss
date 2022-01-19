@@ -6,25 +6,27 @@ scale {
   contents {
 
     trough {
-      background: colors.$surface-3;
+      background: colors.$slider-back;
       slider {
-        background: lighten(colors.$surface-3, 25%);
+        background: lighten(colors.$slider-dot, 25%);
         padding: 8px;
         margin: -5px;
         border-radius: 100%;
       }
       highlight {
-        background: colors.$primary-accent;
+        background: colors.$slider;
       }
     }
   }
-
+          
+      
+// ==> vertical scale top text <==
   // TODO: marks can be at the top or bottom, maybe also on the right or left depending on scale.horizontal/vertical
   marks {
     mark {
       padding-top: 5px;
       indicator {
-        color: colors.$surface-3;
+        color: colors.$slider-marks;
         min-height: 8px;
         min-width: 1px;
       }
@@ -33,3 +35,20 @@ scale {
 
   &:disabled { opacity: 0.3; }
 }
+// Adding additional selector for vertical scale
+//  ==> vertical scale gradient color <==
+scale.vertical {
+    trough {
+        highlight {
+            background: colors.$slider-ver;
+         }
+       }
+  }
+// ==> vertical scale top text <==
+  scale.vertical {
+      value { 
+          color: colors.$slider-text;
+    }
+  }
+      
+

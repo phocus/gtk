@@ -1,7 +1,7 @@
 @use '../colors';
 
 switch {
-  background: transparentize(colors.$foreground-color, 0.8);
+  background: transparentize(colors.$disabled-switch, 0.1);
   border-radius: 20px;
   color: transparent;
   min-width: 40px;
@@ -9,7 +9,7 @@ switch {
   background-clip: padding-box;
 
   slider {
-    background: colors.$foreground-color;
+    background: colors.$switch-circle-off;
     border-radius: 100%;
     min-width: 5px;
     min-height: 5px;
@@ -18,14 +18,16 @@ switch {
   }
 
   &:checked {
-    background: transparentize(colors.$primary-accent, 0.7);
+    background: transparentize(colors.$switch-on, 0.7);
     background-clip: content-box;
     slider {
-      background: colors.$primary-accent;
+      background: colors.$switch-circle-on;
     }
   }
 
-  &:disabled { opacity: 0.3; }
+  &:disabled { 
+    background: colors.$disabled-switch;
+    opacity: 0.8; }
 
   &:hover {
     slider {

@@ -11,5 +11,6 @@ spinner {
     animation: rotate 1s linear infinite;
   }
 
-  &:disabled { opacity: 0.3; }
+  &:disabled { opacity: 0.3; };
+  color: colors.$spinner-color;
 }

@@ -2,9 +2,9 @@
 
 radiobutton {
   radio {
-    -gtk-icon-source: -gtk-recolor(url('../assets/symbolic/radio.symbolic.png'));
+    -gtk-icon-source: -gtk-recolor(url('../assets/symbolic/flower.png'));
     -gtk-icon-transform: scale(0);
-    color: rgba(255,255,255, .8);
+    color: colors.$radio;
     border: 2px solid rgba(255,255,255,0.05);
     border-radius: 100%;
     padding: 3px;
@@ -24,7 +24,7 @@ radiobutton {
 
     &:checked {
       -gtk-icon-transform: scale(1);
-      border-color: colors.$primary-accent;
+      border-color: colors.$radio-check-border;
     }
   }
 

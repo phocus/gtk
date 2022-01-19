@@ -1,0 +1,25 @@
+@use '../colors';
+
+messagedialog {
+    background: colors.$message-dialog;
+    border-color: colors.$message-dialog-border;
+    border-width: 2px;
+    border-style: solid;
+        box.vertical {
+                padding-top: 2px;
+            }
+        button {
+            margin-left: 4px;
+      			margin-right: 4px;
+			      margin-top: 0px;
+			      margin-bottom: 3px;
+            border: none;
+            color: colors.$message-dialog-button-text;
+            background: colors.$message-dialog-button-back;
+            transition: background 170ms ease-out;
+          &:hover:not(:active) {
+                background: colors.$message-dialog-hover;
+        }
+    }
+  }
+ 

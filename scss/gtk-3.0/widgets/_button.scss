@@ -6,12 +6,12 @@ button {
   padding: 8px;
 
   &:hover:not(:active) { background: transparentize(white, 0.9); }
-  &:disabled { opacity: 0.3; }
+  &:disabled { opacity: 0.8; }
 
   &:checked, &.suggested-action {
-    background: colors.$accent-7;
-    color: lighten(colors.$accent-7, 40%);
-    &:hover:not(:active) { background: darken(colors.$accent-7, 5%); }
+    background: colors.$button-checked;
+    color: colors.$button-checked-text;
+    &:hover:not(:active) { background: darken(colors.$button-checked-hover, 4%); }
   }
 
   &.destructive-action {

@@ -9,7 +9,7 @@ treeview {
   -GtkTreeView-horizontal-separator: 8;
   -GtkTreeView-vertical-separator: 8;
 
-  background: colors.$surface-2;
+  background: colors.$treeview;
 
   border-left-color: colors.$highlight; // TODO: check if there is going to be a new way to define tree-lines
   border-top-color: colors.$highlight; // TODO: check if there is going to be a new way to define column-lines
@@ -19,27 +19,30 @@ treeview {
   }
 
   &:selected {
-    background: colors.$accent-7;
+    background: colors.$treeview-selected;
     // TODO: introduce contrast foreground color (light)
-    color: lighten(colors.$accent-7, 50%);
-  }
+    color: colors.$treeview-selected-text;
+      &:hover {
+          color: colors.$treeview-selected-hover;
+          }
+        }
 
   &.separator {
-    color: colors.$highlight;
+    color: colors.$treeview-selected-text;
     min-height: 2px;
   }
-
+  
   header {
     button {
-      border-bottom: 1px solid colors.$highlight;
-      background: colors.$surface-3;
+      border-bottom: 1px solid colors.$treeview-button-border;
+      background: colors.$treeview-button;
 
       &:hover {
-        background: colors.$highlight;
+        background: colors.$treeview-highlight;
       }
 
       &:not(:last-child) {
-        border-right: 1px solid colors.$surface-3;
+        border-right: 1px solid colors.$treeview-header-separator;
       }
     }
   }
