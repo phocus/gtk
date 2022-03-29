@@ -5,5 +5,10 @@ menu {
   menuitem {
     padding: 5px;
     &:hover { background: colors.$surface-3; }
+
+    check {
+      min-width: 20px;
+      min-height: 20px;
+    }
   }
 }

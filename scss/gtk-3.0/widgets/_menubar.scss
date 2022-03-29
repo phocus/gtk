@@ -9,5 +9,9 @@ menubar {
     &:hover {
       background: colors.$surface-2;
     }
+
+    check, radio {
+      margin: 0.4em;
+    }
   }
 }
