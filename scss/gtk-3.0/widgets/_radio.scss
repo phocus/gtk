@@ -3,22 +3,22 @@
 radio {
   -gtk-icon-source: -gtk-recolor(url('../assets/symbolic/radio.symbolic.png'));
   -gtk-icon-transform: scale(0);
-  color: rgba(255,255,255, .8);
-  border: 2px solid rgba(255,255,255,0.05);
+  color: colors.$white-strongest;
+  border: 0.2em solid colors.$white-weakest;
   border-radius: 100%;
-  padding: 3px;
-  min-width: 8px;
-  min-height: 8px;
+  padding: 0.2em;
+  min-width: 0.5em;
+  min-height: 0.5em;
 
   // TODO: extract transitions into separate directory
   transition: -gtk-icon-transform 200ms;
 
   &:hover {
-    border-color: rgba(255,255,255,0.1);
+    border-color: colors.$white-weak;
   }
 
   &:active, &:checked {
-    background: rgba(255,255,255,0.02);
+    background: colors.$white-weakest;
   }
 
   &:checked {
