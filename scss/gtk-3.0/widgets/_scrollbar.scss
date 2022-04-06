@@ -4,27 +4,11 @@ scrollbar {
   -GtkScrollbar-has-backward-stepper: false;
   -GtkScrollbar-has-forward-stepper: false;
 
-  background: transparent;
-
   slider {
-    padding: 3px;
-    background: rgba(255,255,255,0.05);
-    &:hover {
-      background: rgba(255,255,255,0.1);
-    }
-    &:active {
-      background: transparentize(colors.$accent-primary, 0.25);
-    }
-  }
-
-  &:hover {
-    background: rgba(255,255,255,0.05);
-
-    &.horizontal slider {
-      padding: 5px 3px;
-    }
-    &.vertical slider {
-      padding: 3px 5px;
-    }
+    padding: 0.2em;
+    border-radius: 1em;
+    background: colors.$white-weakest;
+    &:hover { background: colors.$white-weak;}
+    &:active { background: colors.$accent-primary; }
   }
 }
