@@ -15,7 +15,7 @@ textview {
   }
 
   selection {
-    background: colors.$primary-accent;
-    color: lighten(colors.$foreground-color, 50%);
+    background: colors.$accent-primary;
+    color: lighten(colors.$white-strong, 50%);
   }
 }

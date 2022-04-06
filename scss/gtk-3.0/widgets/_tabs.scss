@@ -1,10 +1,10 @@
 @use '../colors';
 
 tabs {
-  background: colors.$surface-1;
+  background: colors.$surface-strongest;
 
   .top > & {
-    border-bottom: 2px solid colors.$surface-3;
+    border-bottom: 2px solid colors.$surface-moderate;
     tab {
       border-bottom: 2px solid transparent;
       margin-bottom: -2px;
@@ -12,7 +12,7 @@ tabs {
   }
 
   .right > & {
-    border-left: 2px solid colors.$surface-3;
+    border-left: 2px solid colors.$surface-moderate;
     tab {
       border-left: 2px solid transparent;
       margin-left: -2px;
@@ -20,7 +20,7 @@ tabs {
   }
 
   .bottom > & {
-    border-top: 2px solid colors.$surface-3;
+    border-top: 2px solid colors.$surface-moderate;
     tab {
       border-top: 2px solid transparent;
       margin-top: -2px;
@@ -28,7 +28,7 @@ tabs {
   }
 
   .left > & {
-    border-right: 2px solid colors.$surface-3;
+    border-right: 2px solid colors.$surface-moderate;
     tab {
       border-right: 2px solid transparent;
       margin-right: -2px;
@@ -37,16 +37,16 @@ tabs {
 
   tab {
     padding: 8px;
-    color: transparentize(colors.$foreground-color, 0.8);
+    color: transparentize(colors.$white-strong, 0.8);
     transition: border-color 100ms ease-in-out;
 
     header &:checked {
-      border-color: colors.$primary-accent;
-      color: colors.$foreground-color;
+      border-color: colors.$accent-primary;
+      color: colors.$white-strong;
     }
 
     header &:hover:not(:checked) {
-      border-color: transparentize(colors.$foreground-color, 0.8);
+      border-color: transparentize(colors.$white-strong, 0.8);
     }
   }
 }

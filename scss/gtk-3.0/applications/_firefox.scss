@@ -5,27 +5,27 @@
   // firefox somehow adjusts this color, the minimum color is #262626
   // estimating that firefox adds 15% lightness on top, which is close enough
   // TODO: check algorithm to replace estimate with
-  background: color.adjust(colors.$surface-4, $lightness: - 15%);
+  background: color.adjust(colors.$surface-weak, $lightness: - 15%);
 
   // bar that contains inactive tabs
   // TODO: find out if the gtk headerbar (the one with decorations) can be themed as well
   menubar {
-    color: colors.$highlight;
-    background: colors.$surface-1;
+    color: colors.$white-weakest;
+    background: colors.$surface-strongest;
   }
 
   // address-bar, side-bar (bookmarks), burger menu, account menu
   text {
-    background: colors.$surface-3;
+    background: colors.$surface-moderate;
   }
 
   // context menus
   menu {
-    background: colors.$surface-4;
+    background: colors.$surface-weak;
 
     // TODO: check if this can go into default menu styles, or if this is a weird selector for firefox
     :disabled {
-      color: colors.$highlight;
+      color: colors.$white-weakest;
     }
 
     // TODO: could potentially go into default styles, at the very least make it consistent
@@ -36,6 +36,6 @@
 
   // borders in menus, sidebars, navigation bar and more
   border {
-    border: 1px solid colors.$surface-4;
+    border: 1px solid colors.$surface-weak;
   }
 }

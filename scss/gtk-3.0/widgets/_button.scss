@@ -9,15 +9,15 @@ button {
   &:disabled { opacity: 0.3; }
 
   &:checked, &.suggested-action {
-    background: colors.$accent-7;
-    color: lighten(colors.$accent-7, 40%);
-    &:hover:not(:active) { background: darken(colors.$accent-7, 5%); }
+    background: colors.$purple-normal;
+    color: lighten(colors.$purple-normal, 40%);
+    &:hover:not(:active) { background: darken(colors.$purple-normal, 5%); }
   }
 
   &.destructive-action {
-    background: colors.$accent-1;
-    color: lighten(colors.$accent-1, 40%);
-    &:hover:not(:active) { background: darken(colors.$accent-1, 5%); }
+    background: colors.$red-normal;
+    color: lighten(colors.$red-normal, 40%);
+    &:hover:not(:active) { background: darken(colors.$red-normal, 5%); }
   }
 
   &.circular {

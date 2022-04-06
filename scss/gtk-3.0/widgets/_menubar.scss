@@ -1,13 +1,13 @@
 @use '../colors';
 
 menubar {
-  background: colors.$surface-1;
+  background: colors.$surface-strongest;
 
   menuitem {
     padding: 5px;
 
     &:hover {
-      background: colors.$surface-2;
+      background: colors.$surface-strong;
     }
 
     check, radio {

@@ -15,8 +15,8 @@ window.nautilus-window {
 
   // this is the floating bar usually shown at the bottom right of nautilus when elements are selected
   .floating-bar {
-    background: colors.$surface-2;
-    color: colors.$foreground-color;
+    background: colors.$surface-strong;
+    color: colors.$white-strong;
     padding: 4px;
 
     &.bottom.left {

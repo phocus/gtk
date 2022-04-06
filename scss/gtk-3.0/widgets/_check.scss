@@ -14,16 +14,16 @@ check {
   transition: -gtk-icon-transform 200ms;
 
   &:hover, &:checked {
-    border-color: colors.$primary-accent;
+    border-color: colors.$accent-primary;
   }
 
   &:active, &:checked {
-    background: colors.$primary-accent;
+    background: colors.$accent-primary;
   }
 
   &:checked {
     -gtk-icon-transform: scale(1);
-    border-color: colors.$primary-accent;
+    border-color: colors.$accent-primary;
     &:active { background: transparent; }
   }
 }

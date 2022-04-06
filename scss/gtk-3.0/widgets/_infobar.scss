@@ -4,16 +4,16 @@ infobar {
   color: rgba(255,255,255,0.8);
 
   &.info {
-    background: colors.$accent-4;
+    background: colors.$green-normal;
   }
   &.warning {
-    background: colors.$accent-3;
+    background: colors.$yellow-normal;
   }
   &.error {
-    background: colors.$accent-1;
+    background: colors.$red-normal;
   }
   &.question {
-    background: colors.$accent-6;
+    background: colors.$blue-normal;
   }
 
   // TODO: if the button optimizations don't get more readable here, we have to style an exception

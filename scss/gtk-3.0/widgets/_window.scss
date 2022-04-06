@@ -1,8 +1,8 @@
 @use '../colors';
 
 window, dialog, assistant {
-  background: colors.$surface-1;
-  color: colors.$foreground-color;
+  background: colors.$surface-strongest;
+  color: colors.$white-strong;
 }
 
 window {

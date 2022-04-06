@@ -8,7 +8,7 @@ entry {
   border-radius: 5px;
 
   &:focus {
-    border-color: colors.$accent-7;
+    border-color: colors.$purple-normal;
     background: transparentize(white, 0.9);
   }
 
@@ -22,7 +22,7 @@ entry {
   }
 
   selection {
-    background: colors.$primary-accent;
-    color: lighten(colors.$foreground-color, 50%);
+    background: colors.$accent-primary;
+    color: lighten(colors.$white-strong, 50%);
   }
 }

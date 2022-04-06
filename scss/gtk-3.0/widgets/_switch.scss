@@ -1,7 +1,7 @@
 @use '../colors';
 
 switch {
-  background: transparentize(colors.$foreground-color, 0.8);
+  background: transparentize(colors.$white-strong, 0.8);
   border-radius: 20px;
   color: transparent;
   min-width: 40px;
@@ -9,7 +9,7 @@ switch {
   background-clip: padding-box;
 
   slider {
-    background: colors.$foreground-color;
+    background: colors.$white-strong;
     border-radius: 100%;
     min-width: 5px;
     min-height: 5px;
@@ -18,10 +18,10 @@ switch {
   }
 
   &:checked {
-    background: transparentize(colors.$primary-accent, 0.7);
+    background: transparentize(colors.$accent-primary, 0.7);
     background-clip: content-box;
     slider {
-      background: colors.$primary-accent;
+      background: colors.$accent-primary;
     }
   }
 
@@ -33,7 +33,7 @@ switch {
     }
 
     &:checked slider {
-      box-shadow: 0 0 0 8px transparentize(colors.$accent-7, 0.9);
+      box-shadow: 0 0 0 8px transparentize(colors.$purple-normal, 0.9);
     }
   }
 }

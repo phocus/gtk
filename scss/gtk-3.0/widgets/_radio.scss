@@ -23,6 +23,6 @@ radio {
 
   &:checked {
     -gtk-icon-transform: scale(1);
-    border-color: colors.$primary-accent;
+    border-color: colors.$accent-primary;
   }
 }

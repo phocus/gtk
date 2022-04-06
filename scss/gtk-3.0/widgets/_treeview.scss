@@ -9,37 +9,37 @@ treeview {
   -GtkTreeView-horizontal-separator: 8;
   -GtkTreeView-vertical-separator: 8;
 
-  background: colors.$surface-2;
+  background: colors.$surface-strong;
 
-  border-left-color: colors.$highlight; // TODO: check if there is going to be a new way to define tree-lines
-  border-top-color: colors.$highlight; // TODO: check if there is going to be a new way to define column-lines
+  border-left-color: colors.$white-weakest; // TODO: check if there is going to be a new way to define tree-lines
+  border-top-color: colors.$white-weakest; // TODO: check if there is going to be a new way to define column-lines
 
   &:hover {
-    background: colors.$highlight;
+    background: colors.$white-weakest;
   }
 
   &:selected {
-    background: colors.$accent-7;
+    background: colors.$purple-normal;
     // TODO: introduce contrast foreground color (light)
-    color: lighten(colors.$accent-7, 50%);
+    color: lighten(colors.$purple-normal, 50%);
   }
 
   &.separator {
-    color: colors.$highlight;
+    color: colors.$white-weakest;
     min-height: 2px;
   }
 
   header {
     button {
-      border-bottom: 1px solid colors.$highlight;
-      background: colors.$surface-3;
+      border-bottom: 1px solid colors.$white-weakest;
+      background: colors.$surface-moderate;
 
       &:hover {
-        background: colors.$highlight;
+        background: colors.$white-weakest;
       }
 
       &:not(:last-child) {
-        border-right: 1px solid colors.$surface-3;
+        border-right: 1px solid colors.$surface-moderate;
       }
     }
   }

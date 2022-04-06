@@ -13,7 +13,7 @@ scrollbar {
       background: rgba(255,255,255,0.1);
     }
     &:active {
-      background: transparentize(colors.$primary-accent, 0.25);
+      background: transparentize(colors.$accent-primary, 0.25);
     }
   }
 
