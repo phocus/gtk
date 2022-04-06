@@ -1,7 +1,7 @@
 @use '../colors';
 
 separator {
-  background-image: image(rgba(255,255,255,0.05));
+  background-image: image(colors.$white-weakest);
   background-size: 1px 1px;
   background-position: center center;
 
