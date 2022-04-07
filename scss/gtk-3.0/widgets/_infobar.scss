@@ -1,20 +1,19 @@
 @use '../colors';
 
 infobar {
-  color: rgba(255,255,255,0.8);
+  color: colors.$white-strong;
+  padding: 0.5em;
 
   &.info {
-    background: colors.$green-normal;
+    background: change-color(colors.$blue-normal, $alpha: 0.4);
   }
   &.warning {
-    background: colors.$yellow-normal;
+    background: change-color(colors.$orange-normal, $alpha: 0.4);
   }
   &.error {
-    background: colors.$red-normal;
+    background: change-color(colors.$red-normal, $alpha: 0.4);
   }
   &.question {
-    background: colors.$blue-normal;
+    background: change-color(colors.$accent-primary, $alpha: 0.4);
   }
-
-  // TODO: if the button optimizations don't get more readable here, we have to style an exception
 }
