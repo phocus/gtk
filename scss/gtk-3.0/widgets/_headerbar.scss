@@ -2,45 +2,33 @@
 
 headerbar {
   background: colors.$surface-moderate;
-  padding: 6px;
-
-  box.horizontal {
-    &.right > button.titlebutton:last-child {
-      margin-right: -6px;
-    }
-
-    &.left > button.titlebutton:first-child {
-      margin-left: -6px;
-    }
-  }
+  padding: 0.5em;
 
   button.titlebutton:not(.appmenu) {
     background: transparent;
-    margin: -6px 0;
-    padding: 15px 10px;
-    border-radius: 0;
 
-    &:nth-last-child(-n+2) {
-      margin-left: -6px;
-    }
-
-    $titlebutton_to_color: (
-      minimize: colors.$yellow-normal,
-      maximize: colors.$green-normal,
-      close: colors.$red-normal
-    );
-
-    @each $type, $color in $titlebutton_to_color {
-      &.#{$type} {
-        color: $color;
-        &:hover {
-          background-color: $color;
-        }
+    &.close {
+      color: colors.$red-normal;
+      &:hover {
+        color: colors.$red-light;
+        background: change-color(colors.$red-normal, $alpha: 0.4);
       }
     }
 
-    &:hover {
-      color: rgba(0,0,0,0.5);
+    &.minimize {
+      color: colors.$yellow-normal;
+      &:hover {
+        color: colors.$yellow-light;
+        background: change-color(colors.$yellow-normal, $alpha: 0.4);
+      }
+    }
+
+    &.maximize {
+      color: colors.$green-normal;
+      &:hover {
+        color: colors.$green-light;
+        background: change-color(colors.$green-normal, $alpha: 0.4);
+      }
     }
   }
 
