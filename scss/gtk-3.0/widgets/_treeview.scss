@@ -3,13 +3,11 @@
 // TODO: check if full width horizontal separators are possible
 
 treeview {
-  -GtkTreeView-expander-size: 13;
+  -GtkTreeView-expander-size: 16;
   -GtkTreeView-grid-line-pattern: '';
   -GtkTreeView-tree-line-pattern: '';
-  -GtkTreeView-horizontal-separator: 8;
-  -GtkTreeView-vertical-separator: 8;
-
-  background: colors.$surface-strong;
+  -GtkTreeView-horizontal-separator: 12;
+  -GtkTreeView-vertical-separator: 12;
 
   border-left-color: colors.$white-weakest; // TODO: check if there is going to be a new way to define tree-lines
   border-top-color: colors.$white-weakest; // TODO: check if there is going to be a new way to define column-lines
@@ -19,27 +17,24 @@ treeview {
   }
 
   &:selected {
-    background: colors.$purple-normal;
-    // TODO: introduce contrast foreground color (light)
-    color: lighten(colors.$purple-normal, 50%);
+    background: change-color(colors.$accent-primary, $alpha: 0.6);
+    color: colors.$white-strongest;
   }
 
-  &.separator {
-    color: colors.$white-weakest;
-    min-height: 2px;
-  }
-
-  header {
+  header { 
     button {
-      border-bottom: 1px solid colors.$white-weakest;
-      background: colors.$surface-moderate;
+      padding: 0.7em;
+      background: colors.$surface-strong;
+      border-radius: 0;
+      color: colors.$white-moderate;
 
-      &:hover {
-        background: colors.$white-weakest;
+      &:hover:not(:active) {
+        color: colors.$white-strong;
+        background: colors.$surface-strong;
       }
 
       &:not(:last-child) {
-        border-right: 1px solid colors.$surface-moderate;
+        border-right: 1px solid colors.$white-weakest;
       }
     }
   }
