@@ -5,28 +5,27 @@ calendar {
 
   &.button {
     background: colors.$surface-moderate;
-    color: rgba(255,255,255,0.5);
+    color: colors.$white-moderate;
 
-    &:hover { color: rgba(255,255,255,0.8); }
-    &:disabled { color: rgba(255,255,255,0.1); }
+    &:hover { color: colors.$white-strong; }
+    &:disabled { color: colors.$white-weakest; }
   }
 
   &.header {
     background: colors.$surface-moderate;
-
   }
 
   &.highlight {
-    color: rgba(255,255,255,.2);
+    color: colors.$white-moderate;
   }
 
   &:selected {
-    color: white;
-    border-radius: 0.3em;
+    color: colors.$white-strongest;
+    border-radius: 0.5em;
     background: colors.$accent-primary;
   }
 
   &:indeterminate {
-    color: rgba(255,255,255,.1);
+    color: colors.$white-weak;
   }
 }
