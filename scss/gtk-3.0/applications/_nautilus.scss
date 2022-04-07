@@ -2,14 +2,14 @@
 
 window.nautilus-window {
   .nautilus-menu-sort-heading {
-    margin: 0 -5px;
+    padding: 0.5em;
   }
 
   // those are the items inside the nautilus canvas
   .nautilus-canvas-item {
+    border-radius: 0.3em;
     &:selected, &:active {
-      background: #2d2d2d;
-      border-radius: 3px;
+      background: change-color(colors.$accent-primary, $alpha: 0.4);
     }
   }
 
@@ -17,13 +17,35 @@ window.nautilus-window {
   .floating-bar {
     background: colors.$surface-strong;
     color: colors.$white-strong;
-    padding: 4px;
+    padding: 0.3em;
 
     &.bottom.left {
-      border-top-right-radius: 3px;
+      border-top-right-radius: 0.5em;
     }
     &.bottom.right {
-      border-top-left-radius: 3px;
+      border-top-left-radius: 0.5em;
+    }
+  }
+
+  placessidebar  {
+    background: colors.$surface-strong;
+
+    list {
+      background: transparent;
+
+      row {
+        &:hover {
+          background: colors.$white-weakest;
+        }
+
+        .sidebar-icon {
+          margin: 0 1em;
+        }
+      }
+    }
+
+    &.frame, .frame {
+      border: 0;
     }
   }
 }
