@@ -1,17 +1,18 @@
 @use '../colors';
+@use '../config';
 
 menubar {
   background: colors.$surface-strongest;
 
   menuitem {
-    padding: 5px;
+    padding: config.$spacing-medium;
 
     &:hover {
-      background: colors.$surface-strong;
+      background: colors.$white-weakest;
     }
 
     check, radio {
-      margin: 0.4em;
+      margin-right: config.$spacing-medium;
     }
   }
 }
