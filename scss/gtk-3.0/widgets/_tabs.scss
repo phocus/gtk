@@ -1,52 +1,37 @@
+@use 'sass:color';
 @use '../colors';
+@use '../config';
 
 tabs {
   background: colors.$surface-strongest;
 
-  .top > & {
-    border-bottom: 2px solid colors.$surface-moderate;
-    tab {
-      border-bottom: 2px solid transparent;
-      margin-bottom: -2px;
-    }
-  }
-
-  .right > & {
-    border-left: 2px solid colors.$surface-moderate;
-    tab {
-      border-left: 2px solid transparent;
-      margin-left: -2px;
-    }
-  }
-
-  .bottom > & {
-    border-top: 2px solid colors.$surface-moderate;
-    tab {
-      border-top: 2px solid transparent;
-      margin-top: -2px;
-    }
-  }
-
-  .left > & {
-    border-right: 2px solid colors.$surface-moderate;
-    tab {
-      border-right: 2px solid transparent;
-      margin-right: -2px;
+  @each $class, $side in (
+    'top': 'bottom',
+    'right': 'left',
+    'bottom': 'top',
+    'left': 'right'
+  ) {
+    .#{$class} > & {
+      border-#{$side}: config.$border-size solid colors.$surface-moderate;
+      tab {
+        border-#{$side}: config.$border-size solid transparent;
+        margin-#{$side}: -#{config.$border-size};
+      }
     }
   }
 
   tab {
-    padding: 8px;
-    color: transparentize(colors.$white-strong, 0.8);
-    transition: border-color 100ms ease-in-out;
+    padding: config.$spacing-medium;
+    color: colors.$white-moderate;
 
     header &:checked {
-      border-color: colors.$accent-primary;
+      border-color: color.change(colors.$accent-primary, $alpha: config.$tint-medium);
       color: colors.$white-strong;
     }
 
     header &:hover:not(:checked) {
-      border-color: transparentize(colors.$white-strong, 0.8);
+      border-color: colors.$white-weakest;
+      color: colors.$white-strong;
     }
   }
 }
