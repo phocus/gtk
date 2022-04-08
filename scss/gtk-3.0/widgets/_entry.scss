@@ -1,28 +1,33 @@
+@use 'sass:color';
 @use '../colors';
+@use '../config';
 
 entry {
-  transition: all 100ms ease-in-out;
-  background: transparentize(white, 0.95);
-  border: 2px solid transparent;
-  padding: 6px;
-  border-radius: 5px;
+  padding: calc(config.$spacing-medium - config.$border-size);
+  border-radius: config.$radius;
+  border: config.$border-size solid colors.$white-weakest;
+  background: colors.$white-weakest;
+  background-clip: padding-box;
 
   &:focus {
-    border-color: colors.$purple-normal;
-    background: transparentize(white, 0.9);
+    border-color: color.change(colors.$accent-primary, $alpha: config.$tint-strong);
   }
 
   &:disabled {
-    opacity: 0.3;
+    opacity: config.$disabled-opacity;
   }
 
   image {
-    &.left { margin-right: 8px; }
-    &.right { margin-left: 8px; }
+    &.left {
+      margin-right: config.$spacing-medium;
+    }
+    &.right {
+      margin-left: config.$spacing-medium;
+    }
   }
 
   selection {
-    background: colors.$accent-primary;
-    color: lighten(colors.$white-strong, 50%);
+    color: colors.$white-strong;
+    background: color.change(colors.$accent-primary, $alpha: config.$tint-medium);
   }
 }
