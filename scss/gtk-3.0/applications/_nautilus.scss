@@ -1,3 +1,4 @@
+@use 'sass:color';
 @use '../colors';
 
 window.nautilus-window {
@@ -9,7 +10,7 @@ window.nautilus-window {
   .nautilus-canvas-item {
     border-radius: 0.3em;
     &:selected, &:active {
-      background: change-color(colors.$accent-primary, $alpha: 0.4);
+      background: color.change(colors.$accent-primary, $alpha: 0.4);
     }
   }
 
@@ -34,12 +35,14 @@ window.nautilus-window {
       background: transparent;
 
       row {
-        &:hover {
-          background: colors.$white-weakest;
-        }
+        &:hover { background: colors.$white-weakest; }
+
+        &:active { background: colors.$white-weak; }
+
+        &:selected { background: color.change(colors.$accent-primary, $alpha: 0.6); }
 
         .sidebar-icon {
-          margin: 0 1em;
+          margin-right: 1em;
         }
       }
     }
