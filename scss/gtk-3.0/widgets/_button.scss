@@ -43,13 +43,26 @@ button {
   }
 
   .linked.horizontal & {
-    &:not(:first-child) {
-      border-top-left-radius: 0;
-      border-bottom-left-radius: 0;
+    border-radius: 0;
+
+    &:first-child {
+      border-radius: config.$radius 0 0 config.$radius;
     }
-    &:not(:last-child) {
-      border-top-right-radius: 0;
-      border-bottom-right-radius: 0;
+    
+    &:last-child {
+      border-radius: 0 config.$radius config.$radius 0;
     }
-  } 
+  }
+
+  .linked.vertical & {
+    border-radius: 0;
+
+    &:first-child {
+      border-radius: config.$radius config.$radius 0 0;
+    }
+
+    &:last-child {
+      border-radius: 0 0 config.$radius config.$radius;
+    }
+  }
 }
