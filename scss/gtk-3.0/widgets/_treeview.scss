@@ -1,4 +1,6 @@
+@use 'sass:color';
 @use '../colors';
+@use '../config';
 
 // TODO: check if full width horizontal separators are possible
 
@@ -17,13 +19,13 @@ treeview {
   }
 
   &:selected {
-    background: change-color(colors.$accent-primary, $alpha: 0.6);
+    background: color.change(colors.$accent-primary, $alpha: config.$tint-medium);
     color: colors.$white-strongest;
   }
 
   header { 
     button {
-      padding: 0.7em;
+      padding: config.$spacing-medium;
       background: colors.$surface-strong;
       border-radius: 0;
       color: colors.$white-moderate;
@@ -34,6 +36,7 @@ treeview {
       }
 
       &:not(:last-child) {
+        // TODO: check if there is a way to thicken threeview borders (other than this one)
         border-right: 1px solid colors.$white-weakest;
       }
     }
