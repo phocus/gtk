@@ -1,16 +1,13 @@
 @use 'sass:color';
 @use '../colors';
+@use '../config';
 
 window.nautilus-window {
-  .nautilus-menu-sort-heading {
-    padding: 0.5em;
-  }
-
   // those are the items inside the nautilus canvas
   .nautilus-canvas-item {
-    border-radius: 0.3em;
+    border-radius: config.$radius;
     &:selected, &:active {
-      background: color.change(colors.$accent-primary, $alpha: 0.4);
+      background: color.change(colors.$accent-primary, $alpha: config.$tint-medium);
     }
   }
 
@@ -18,13 +15,13 @@ window.nautilus-window {
   .floating-bar {
     background: colors.$surface-strong;
     color: colors.$white-strong;
-    padding: 0.3em;
+    padding: config.$spacing-small;
 
     &.bottom.left {
-      border-top-right-radius: 0.5em;
+      border-top-right-radius: config.$radius;
     }
     &.bottom.right {
-      border-top-left-radius: 0.5em;
+      border-top-left-radius: config.$radius;
     }
   }
 
@@ -35,20 +32,54 @@ window.nautilus-window {
       background: transparent;
 
       row {
-        &:hover { background: colors.$white-weakest; }
+        &:hover {
+          background: colors.$white-weakest;
+        }
 
-        &:active { background: colors.$white-weak; }
+        &:active {
+          background: colors.$white-weak;
+        }
 
-        &:selected { background: color.change(colors.$accent-primary, $alpha: 0.6); }
+        &:selected {
+          background: color.change(colors.$accent-primary, $alpha: config.$tint-medium);
+        }
 
         .sidebar-icon {
-          margin-right: 1em;
+          margin-right: config.$spacing-medium;
         }
       }
     }
 
     &.frame, .frame {
       border: 0;
+    }
+  }
+
+  .nautilus-path-bar {
+    background: colors.$white-weakest;
+      border-radius: config.$radius;
+
+    > button {
+      background: transparent;
+      &:hover {
+        background: colors.$white-weakest;
+      }
+    }
+
+    .path-buttons-box {
+      button {
+        background: transparent;
+        &:hover:not(.current-dir) {
+          background: transparent;
+          label {
+            color: colors.$white-moderate;
+          }
+        }
+      }
+      .dim-label {
+        color: colors.$white-weak;
+        opacity: 1;
+      }
     }
   }
 }
