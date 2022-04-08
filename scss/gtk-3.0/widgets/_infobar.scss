@@ -1,19 +1,21 @@
+@use 'sass:color';
 @use '../colors';
+@use '../config';
 
 infobar {
   color: colors.$white-strong;
-  padding: 0.5em;
+  padding: config.$spacing-small;
 
   &.info {
-    background: change-color(colors.$blue-normal, $alpha: 0.4);
+    background: color.change(colors.$blue-normal, $alpha: config.$tint-medium);
   }
   &.warning {
-    background: change-color(colors.$orange-normal, $alpha: 0.4);
+    background: color.change(colors.$orange-normal, $alpha: config.$tint-medium);
   }
   &.error {
-    background: change-color(colors.$red-normal, $alpha: 0.4);
+    background: color.change(colors.$red-normal, $alpha: config.$tint-medium);
   }
   &.question {
-    background: change-color(colors.$accent-primary, $alpha: 0.4);
+    background: color.change(colors.$accent-primary, $alpha: config.$tint-medium);
   }
 }
