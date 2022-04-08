@@ -19,6 +19,10 @@ button {
     }
   }
 
+  &.image-button:not(.text-button) {
+    padding: calc(config.$spacing-medium + 0.2em);
+  }
+
   &.destructive-action {
     background: color.change(colors.$red-normal, $alpha: config.$tint-medium);
     color: colors.$white-strongest;
