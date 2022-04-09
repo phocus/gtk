@@ -54,4 +54,28 @@ spinbutton {
       border-top: 0;
     }
   }
+
+  .linked.horizontal & {
+    &:not(:first-child) {
+      :nth-child(3) { border-top-left-radius: 0; }
+      :nth-child(5) { border-bottom-left-radius: 0; }
+    }
+
+    &:not(:last-child) {
+      :nth-child(3) { border-top-right-radius: 0; }
+      :nth-child(5) { border-bottom-right-radius: 0; }
+    }
+  }
+
+  .linked.vertical & {
+    &:not(:first-child) {
+      :nth-child(3) { border-top-left-radius: 0; }
+      :nth-child(5) { border-top-right-radius: 0; }
+    }
+
+    &:not(:last-child) {
+      :nth-child(3) { border-bottom-left-radius: 0; }
+      :nth-child(5) { border-bottom-right-radius: 0; }
+    }
+  }
 }
