@@ -17,6 +17,10 @@ spinbutton {
     }
   }
 
+  &:disabled {
+    opacity: config.$disabled-opacity;
+  }
+
   &.horizontal {
     :nth-child(3) {
       border-radius: config.$radius 0 0 config.$radius;
