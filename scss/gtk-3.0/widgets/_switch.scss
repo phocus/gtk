@@ -1,11 +1,12 @@
+@use 'sass:color';
 @use '../colors';
+@use '../config';
 
 switch {
   background: colors.$white-weakest;
   border-radius: 1em;
-  color: transparent;
   min-width: 3em;
-  border: 0.2em solid transparent;
+  border: config.$border-size solid transparent;
 
   slider {
     background: colors.$white-moderate;
@@ -14,22 +15,29 @@ switch {
     min-height: 1.5em;
   }
 
+  :nth-child(2) { color: transparent; }
+  :nth-child(3) { color: colors.$white-moderate; }
+
   &:checked {
-    background: change-color(colors.$accent-primary, $alpha: 0.3);
+    background: color.change(colors.$accent-primary, $alpha: config.$tint-weak);
+    
     slider {
-      background: colors.$accent-primary;
+      background: color.change(colors.$accent-primary, $alpha: config.$tint-strong);
     }
+
+    :nth-child(2) { color: colors.$white-strong; }
+    :nth-child(3) { color: transparent; }
   }
 
-  &:disabled { opacity: 0.3; }
+  &:disabled { opacity: config.$disabled-opacity; }
 
   &:hover {
     slider {
-      box-shadow: 0 0 0 8px colors.$white-weakest;
+      box-shadow: 0 0 0 config.$spacing-small colors.$white-weak;
     }
 
     &:checked slider {
-      box-shadow: 0 0 0 8px change-color(colors.$accent-primary, $alpha: 0.2);
+      box-shadow: 0 0 0 config.$spacing-small color.change(colors.$accent-primary, $alpha: config.$tint-weak);
     }
   }
 }
