@@ -25,36 +25,6 @@ window.nautilus-window {
     }
   }
 
-  placessidebar  {
-    background: colors.$surface-strong;
-
-    list {
-      background: transparent;
-
-      row {
-        &:hover {
-          background: colors.$white-weakest;
-        }
-
-        &:active {
-          background: colors.$white-weak;
-        }
-
-        &:selected {
-          background: color.change(colors.$accent-primary, $alpha: config.$tint-medium);
-        }
-
-        .sidebar-icon {
-          margin-right: config.$spacing-medium;
-        }
-      }
-    }
-
-    &.frame, .frame {
-      border: 0;
-    }
-  }
-
   .nautilus-path-bar {
     background: colors.$white-weakest;
       border-radius: config.$radius;
