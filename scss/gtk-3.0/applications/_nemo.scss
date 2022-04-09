@@ -1,3 +1,4 @@
+@use "sass:color";
 @use "../colors";
 @use "../config";
 
@@ -19,5 +20,14 @@
   .toolbar {
     background: colors.$surface-moderate;
     margin: -0.1em;
+  }
+
+  .nemo-window-pane {
+    :selected {
+      background: color.change(colors.$accent-primary, $alpha: config.$tint-medium);
+    }
+    :active {
+      background: color.change(colors.$accent-primary, $alpha: config.$tint-medium);
+    }
   }
 }
