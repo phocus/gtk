@@ -5,6 +5,7 @@
 infobar {
   color: colors.$white-strong;
   padding: config.$spacing-small;
+  background: colors.$surface-strong;
 
   &.info {
     background: color.change(colors.$blue-normal, $alpha: config.$tint-medium);
