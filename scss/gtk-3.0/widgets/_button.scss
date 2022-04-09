@@ -46,6 +46,15 @@ button {
     }
   }
 
+  label + & {
+    margin-left: config.$spacing-medium;
+  }
+
+  &.small-button {
+    min-width: 1.2em;
+    min-height: 1.2em;
+  }
+
   .linked.horizontal & {
     &:not(:first-child) {
       border-top-left-radius: 0;
