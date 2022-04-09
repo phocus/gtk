@@ -1,7 +1,16 @@
 @use "../colors";
+@use "../config";
 
 dialog {
+  background: colors.$surface-moderate;
+
   .dialog-action-box {
-    background: colors.$surface-moderate;
+    padding: config.$spacing-medium;
+  }
+
+  fontchooser {
+    border-radius: config.$radius;
+    background: colors.$surface-strongest;
+    padding: config.$spacing-large;
   }
 }
