@@ -1,0 +1,23 @@
+@use "../colors";
+@use "../config";
+
+.nemo-window {
+  .nemo-places-sidebar {
+    background: colors.$surface-strong;
+  }
+
+  .primary-toolbar {
+    background: colors.$surface-moderate;
+    padding: config.$spacing-small;
+  }
+
+  menubar ~ separator {
+    min-width: 0;
+    min-height: 0;
+  }
+
+  .toolbar {
+    background: colors.$surface-moderate;
+    margin: -0.1em;
+  }
+}
