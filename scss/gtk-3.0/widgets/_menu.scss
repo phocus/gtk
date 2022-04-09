@@ -1,14 +1,12 @@
 @use '../colors';
+@use '../config';
 
 menu {
-  background: rgba(255,255,255,0.1);
+  background: colors.$surface-weak;
   menuitem {
-    padding: 5px;
-    &:hover { background: colors.$surface-moderate; }
-
-    check {
-      min-width: 20px;
-      min-height: 20px;
+    padding: config.$spacing-medium;
+    &:hover {
+      background: colors.$white-weakest;
     }
   }
 }
