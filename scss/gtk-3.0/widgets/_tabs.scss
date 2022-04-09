@@ -33,5 +33,9 @@ tabs {
       border-color: colors.$white-weakest;
       color: colors.$white-strong;
     }
+
+    image {
+      padding: config.$spacing-medium;
+    }
   }
 }
