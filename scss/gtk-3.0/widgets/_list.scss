@@ -1,12 +1,18 @@
 @use '../colors';
+@use '../config';
 
 list {
-  background: colors.$surface-strong;
+  background: colors.$surface-strongest;
 
   row {
-    padding: 6px;
+    background: colors.$surface-strong;
+    padding: config.$spacing-medium;
     &:hover {
       background: colors.$surface-moderate;
     }
+  }
+
+  > label {
+    padding: config.$spacing-small;
   }
 }
