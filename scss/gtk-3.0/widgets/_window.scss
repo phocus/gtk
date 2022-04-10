@@ -1,6 +1,6 @@
 @use '../colors';
 
-window, dialog, assistant {
+window, assistant {
   background: colors.$surface-strongest;
   color: colors.$white-strong;
 }
