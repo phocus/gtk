@@ -51,8 +51,9 @@ button {
   }
 
   &.small-button {
-    min-width: 1.2em;
-    min-height: 1.2em;
+    image:only-child {
+      padding: config.$spacing-small;
+    }
   }
 
   .linked.horizontal & {
