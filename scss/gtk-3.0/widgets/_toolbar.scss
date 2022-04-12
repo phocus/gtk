@@ -6,7 +6,8 @@ toolbar, .toolbar {
   padding: config.$spacing-medium;
 
   &.osd {
-    background: colors.$white-weakest;
+    background: colors.$surface-weak;
     padding: config.$spacing-medium;
+    border-radius: config.$radius;
   }
 }
