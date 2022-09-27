@@ -6,11 +6,12 @@
   // estimating that firefox adds 15% lightness on top, which is close enough
   // TODO: check algorithm to replace estimate with
   background: color.adjust(colors.$surface-weak, $lightness: - 15%);
-
+  color: colors.$white-strong;
+  
   // bar that contains inactive tabs
   // TODO: find out if the gtk headerbar (the one with decorations) can be themed as well
   menubar {
-    color: colors.$white-weakest;
+    color: colors.$white-moderate;
     background: colors.$surface-strongest;
   }
 
