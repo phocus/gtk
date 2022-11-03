@@ -1,6 +1,13 @@
 # Phocus GTK3 Theme
 This GTK3 theme is part of the [Phocus](https://github.com/phocus/) theme collection.
 
+## About GTK4
+Libadwaita applications can't be themed through a GTK4 theme. The amount of non-libadwaita GTK4 apps is so little, that it is not worth adding a phocus GTK4 theme.
+
+You can manually overwrite the libadwaita colors to somewhat get a phocus feeling. Feel free to copy this example from my dotfiles [~/.config/gtk-4.0/gtk.css](https://github.com/phisch/dotfiles/blob/master/.config/gtk-4.0/gtk.css). This won't get you the phocus look you are used to, but it is the best we can do.
+
+May proper GTK4 theming rest in piece 🪦
+
 ## Installation From source
 Make sure to install the following dependency:
 
