@@ -2,9 +2,9 @@
 @use '../colors';
 
 #MozillaGtkWidget {
-  // firefox somehow adjusts this color, the minimum color is #262626
-  // estimating that firefox adds 15% lightness on top, which is close enough
-  // TODO: check algorithm to replace estimate with
+  // by default firefox mixes -moz-dialog 85& with pure white with in srgb space and uses that as the background
+  // it's possible to kinda bypass it by either using color.adjust (what is currently being done) or modifying --toolbar-non-lwt-bgcolor and setting it to `-moz-dialog !important`
+  // see: https://searchfox.org/mozilla-central/source/toolkit/themes/shared/global-shared.css#46
   background: color.adjust(colors.$surface-weak, $lightness: - 15%);
   color: colors.$white-strong;
   
